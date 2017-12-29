@@ -8,7 +8,7 @@ using namespace std;
 class Blinky
 {
 	public:
-	  void initialize(char port, char pin, unsigned int onTime, unsigned int offTime);
+	  void init(char port, char pin, unsigned int onTime, unsigned int offTime);
 	  void refresh(void);
 
 	private:

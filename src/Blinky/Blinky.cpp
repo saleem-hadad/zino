@@ -1,6 +1,6 @@
 #include "Blinky.h"
 
-void Blinky::initialize(char port, char pin, unsigned int onTime, unsigned int offTime)
+void Blinky::init(char port, char pin, unsigned int onTime, unsigned int offTime)
 {
   if(port == 'B')
   {
