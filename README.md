@@ -1,11 +1,9 @@
 # Zino
 ## My custom Arduino library using C++
 
-```NO DELAY, blah :p```
+```NO DELAY, blah 😝```
 
 > Classes
-
-```In Development```
 
 + GPIO
 + Blinky
