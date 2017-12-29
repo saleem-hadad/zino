@@ -1,2 +1,2 @@
-# myno
-Custom Arduino library using C++
+# Zino
+## Custom Arduino library using C++
