@@ -12,7 +12,7 @@ void GPIO::setup(Pin& pin, PinMode mode)
 {
   if(mode == Output)
   {
-    *DDR_B = 1 << pin.pin();
+    *DDR_B |= 1 << pin.pin();
   }
   else if(mode == Input)
   {
