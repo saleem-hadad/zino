@@ -4,54 +4,36 @@
 
 #include "GPIO.h"
 
+unsigned char *DDR_B  = (unsigned char*) 0x24;
+unsigned char *PORT_B = (unsigned char*) 0x25;
+unsigned char *PIN_B  = (unsigned char*) 0x23;
+
 void GPIO::setup(Pin& pin, PinMode mode)
 {
-  unsigned char *DDR;
-  unsigned char *PORT;
-  unsigned char *PIN;
-
-  GPIO::assignRegisters(pin.port(), &DDR, &PORT, &PIN);
-
   if(mode == Output)
   {
-    *DDR = 1 << pin.pin();
+    *DDR_B = 1 << pin.pin();
   }
   else if(mode == Input)
   {
-    *DDR &= ~(1 << pin.pin());
+    *DDR_B &= ~(1 << pin.pin());
   }
   else if(mode == InputWithPullUp)
   {
-    *DDR &= ~(1 << pin.pin());
-    *PORT|= (1 << pin.pin());
-  }
-}
-
-void GPIO::assignRegisters(Port port, unsigned char** DDR, unsigned char** PORT, unsigned char** PIN)
-{
-  if(port == PortB)
-  {
-    *DDR  = (unsigned char*) 0x24;
-    *PORT = (unsigned char*) 0x25;
-    *PIN  = (unsigned char*) 0x23;
+    *DDR_B &= ~(1 << pin.pin());
+    *PORT_B |= (1 << pin.pin());
   }
 }
 
 void GPIO::write(Pin& pin, char value)
 {
-  unsigned char *DDR;
-  unsigned char *PORT;
-  unsigned char *PIN;
-
-  GPIO::assignRegisters(pin.port(), &DDR, &PORT, &PIN);
-
   if(value)
   {
-    *PORT |= (1 << pin.pin());
+    *PORT_B |= (1 << pin.pin());
   }
   else
   {
-    *PORT &= ~(1 << pin.pin());
+    *PORT_B &= ~(1 << pin.pin());
   }
 }
 
@@ -63,4 +45,9 @@ void GPIO::high(Pin& pin)
 void GPIO::low(Pin& pin)
 {
   GPIO::write(pin, 0);
+}
+
+bool GPIO::read(Pin& pin)
+{
+  return (*PIN_B & (1 << pin.pin()));
 }
