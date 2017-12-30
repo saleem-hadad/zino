@@ -7,13 +7,13 @@
 
 Blinky::Blinky()
 {
-  Pin pin = Pin(PortB, 5);
-  this->init(pin, 1000, 1000);
+  // Pin pin = Pin(PortB, 5);
+  // this->init(pin, 1000, 1000);
 }
 
-void Blinky::init(Pin& pin, unsigned int onTime, unsigned int offTime)
+void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
 {
-  this->_pin    = pin;
+  this->_pin    = &pin;
   this->onTime  = onTime;
   this->offTime = offTime;
 
@@ -30,7 +30,7 @@ void Blinky::refresh(void)
     {
       this->active = true;
       this->previousTime = currentTime;
-      GPIO::high(this->_pin);
+      GPIO::high(*this->_pin);
     }
   }
   else
@@ -39,7 +39,7 @@ void Blinky::refresh(void)
     {
       this->active = false;
       this->previousTime = currentTime;
-      GPIO::low(this->_pin);
+      GPIO::low(*this->_pin);
     }
   }
 }

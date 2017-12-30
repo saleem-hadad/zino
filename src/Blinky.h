@@ -13,10 +13,10 @@ class Blinky
 public:
 	Blinky();
 	void refresh(void);
-  void init(Pin& pin, unsigned int onTime, unsigned int offTime);
+  void init(Pin pin, unsigned int onTime, unsigned int offTime);
 
 private:
-	Pin& _pin;
+	Pin* _pin;
   void setup(void);
 	bool active = false;
   unsigned int onTime;
