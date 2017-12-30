@@ -1,14 +1,16 @@
-#ifndef Blinky_h
-#define Blinky_h
+//
+// Created by Saleem Hadad on 30/12/2017.
+//
+
+#ifndef ZINO_Blinky_h
+#define ZINO_Blinky_h
 
 #include <Arduino.h>
-
-using namespace std;
 
 class Blinky
 {
 	public:
-	  void initialize(char port, char pin, unsigned int onTime, unsigned int offTime);
+	  void init(char port, char pin, unsigned int onTime, unsigned int offTime);
 	  void refresh(void);
 
 	private:
