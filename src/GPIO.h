@@ -8,11 +8,12 @@
 #include "Pin.h"
 
 class GPIO {
+private:
+  GPIO();
 public:
-    GPIO();
-    static GPIO shared = GPIO();
-    void setup(Pin& pin, PinMode mode);
+    static void setup(Pin& pin, PinMode mode);
+    static void high(Pin& pin);
+    static void low(Pin& pin);
 };
-
 
 #endif
