@@ -17,6 +17,7 @@ class Blinky
 
 	private:
 	  void setup(void);
+		bool active = false;
 	  unsigned int onTime;
 	  unsigned int offTime;
 	  unsigned long previousTime=0;

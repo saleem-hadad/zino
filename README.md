@@ -1,10 +1,12 @@
 # ☡ino ❤︎
 ## My custom Arduino library using C++
+### NO DELAY, blah 😝
 
-```NO DELAY, blah 😝```
+> Supported Boards
+
++ UNO
 
 > Classes
-
 
 + GPIO
 + Blinky

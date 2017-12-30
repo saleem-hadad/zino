@@ -12,6 +12,8 @@ private:
   GPIO();
 public:
     static void setup(Pin& pin, PinMode mode);
+    static void assignRegisters(Port port, unsigned char** DDR, unsigned char** PORT, unsigned char** PIN);
+    static void write(Pin& pin, char value);
     static void high(Pin& pin);
     static void low(Pin& pin);
 };

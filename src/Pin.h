@@ -8,23 +8,23 @@
 enum PinMode {
     Output,
     Input,
-    InputPullUp
+    InputWithPullUp
 };
 
 enum Port {
-    B,
-    D,
-    C
+    PortB,
+    PortD,
+    PortC
 };
 
 class Pin {
 private:
   Port _port;
-  unsigned char _pin;
+  char _pin;
 public:
-    Pin(Port port, unsigned char pin);
+    Pin(Port port, char pin);
     Port port();
-    unsigned char pin();
+    char pin();
 };
 
 
