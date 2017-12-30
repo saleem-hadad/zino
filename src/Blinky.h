@@ -12,16 +12,16 @@ class Blinky
 {
 public:
 	Blinky();
+	void refresh(void);
   void init(Pin& pin, unsigned int onTime, unsigned int offTime);
-  void refresh(void);
 
 private:
+	Pin& _pin;
   void setup(void);
 	bool active = false;
   unsigned int onTime;
   unsigned int offTime;
   unsigned long previousTime=0;
-  Pin& _pin;
 };
 
 #endif
