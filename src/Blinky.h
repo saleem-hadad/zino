@@ -10,18 +10,18 @@
 
 class Blinky
 {
-	public:
-		Blinky();
-	  void init(Pin& pin, unsigned int onTime, unsigned int offTime);
-	  void refresh(void);
+public:
+	Blinky();
+  void init(Pin& pin, unsigned int onTime, unsigned int offTime);
+  void refresh(void);
 
-	private:
-	  void setup(void);
-		bool active = false;
-	  unsigned int onTime;
-	  unsigned int offTime;
-	  unsigned long previousTime=0;
-	  Pin& _pin;
+private:
+  void setup(void);
+	bool active = false;
+  unsigned int onTime;
+  unsigned int offTime;
+  unsigned long previousTime=0;
+  Pin& _pin;
 };
 
 #endif
