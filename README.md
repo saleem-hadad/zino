@@ -11,6 +11,7 @@
 - Released
   + Button
   + AnalogComparator
+  + Delay
 - Development
   + GPIO
   + Pin
