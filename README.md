@@ -8,15 +8,20 @@
 
 > Classes
 
-+ GPIO
-+ Blinky
-+ LED
-+ DCMotor
-+ Servo
-+ Stepper
-+ EEPROM
-+ SPI
-+ I2C
-+ Serial
-+ Ultrasonic
-+ IR
+- Released
+  + Button
+- Development
+  + GPIO
+  + Pin
+  + Blinky
+- Future
+  + LED
+  + DCMotor
+  + Servo
+  + Stepper
+  + EEPROM
+  + SPI
+  + I2C
+  + Serial
+  + Ultrasonic
+  + IR
