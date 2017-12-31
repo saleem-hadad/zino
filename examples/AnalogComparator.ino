@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Blinky.h>
 #include <AnalogComparator.h>
 
@@ -9,13 +10,14 @@ void comparatorOutput(bool aboveThreshold)
   if (! aboveThreshold) { return; }
 
   //blink LED only if the comparatorOutput aboveThreshold
-  led[0].refresh();
+  led.refresh();
 }
 
 void setup()
 {
   comparator.init(true, true); //enabled, bandgabSelected
-  led[0].init(Pin(PortB, 0), 600, 650);
+  comparator.output = comparatorOutput; // very important
+  led.init(Pin(PortB, 0), 600, 650);
 }
 
 void loop()
