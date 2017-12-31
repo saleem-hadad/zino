@@ -30,7 +30,7 @@ void Button::refresh()
       bool current = GPIO::read(this->_pin);
       if(current)
       {
-        (*this->pressed)();
+        if(this->pressed) (*this->pressed)();
       }
       this->_previous = current;
     }
