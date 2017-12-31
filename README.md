@@ -1,4 +1,4 @@
-![zino](https://raw.githubusercontent.com/saleem-hadad/zino/master/zino.png)
+![zino](https://raw.githubusercontent.com/saleem-hadad/zino/master/zino.jpg)
 
 # 𝔃ino ❤︎
 ## My custom Arduino library using C++
