@@ -1,4 +1,4 @@
-# ☡ino ❤︎
+# 𝔃ino ❤︎
 ## My custom Arduino library using C++
 ### NO DELAY, blah 😝
 
