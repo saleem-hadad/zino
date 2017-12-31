@@ -1,3 +1,5 @@
+![zino](https://raw.githubusercontent.com/saleem-hadad/zino/master/zino.png)
+
 # 𝔃ino ❤︎
 ## My custom Arduino library using C++
 ### NO DELAY, blah 😝
