@@ -1,7 +1,8 @@
 #include <Arduino.h>
 #include <Delay.h>
 
-Delay myDelay;
+Delay myDelay(1000);
+// Delay myDelay; //Other initialization, default duration 1000 ms.
 
 void callback()
 {
@@ -10,12 +11,12 @@ void callback()
 
 void setup()
 {
+  myDelay.init(1000); //default duration is 1000 ms.
   myDelay.callback = callback;
 }
 
 void loop()
 {
   myDelay.refresh();
-  
   //Other stuff goes here
 }
