@@ -27,11 +27,12 @@ void AnalogComparator::refresh()
 {
   if(this->aboveThreshold())
   {
-    (*this->output)(true);
+    if (this->output) (*this->output)(true);
+
     return;
   }
 
-  (*this->output)(false);
+  if (this->output) (*this->output)(false);
 }
 
 void AnalogComparator::enable()
