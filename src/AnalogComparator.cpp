@@ -5,10 +5,22 @@
 #include "AnalogComparator.h"
 #include <Arduino.h>
 
+AnalogComparator::AnalogComparator()
+{
+  this->enable();
+  this->enableBandgab();
+}
+
 AnalogComparator::AnalogComparator(bool enabled, bool bandgabSelected)
 {
   if(enabled) this->enable();
-  if(bandgabSelected) *this->_acsr |= (1 << this->_acbg);
+  if(bandgabSelected) this->enableBandgab();
+}
+
+void AnalogComparator::init(bool enabled, bool bandgabSelected)
+{
+  if(enabled) this->enable();
+  if(bandgabSelected) this->enableBandgab();
 }
 
 void AnalogComparator::refresh()
@@ -30,6 +42,16 @@ void AnalogComparator::enable()
 void AnalogComparator::disable()
 {
   *this->_acsr |= (1 << this->_acd);
+}
+
+void AnalogComparator::enableBandgab()
+{
+  *this->_acsr |= (1 << this->_acbg);
+}
+
+void AnalogComparator::disableBandgab()
+{
+  *this->_acsr &= ~(1 << this->_acbg);
 }
 
 bool AnalogComparator::aboveThreshold()

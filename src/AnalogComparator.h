@@ -8,10 +8,14 @@
 class AnalogComparator
 {
 public:
+  AnalogComparator();
 	AnalogComparator(bool enabled, bool bandgabSelected);
+  void init(bool enabled, bool bandgabSelected);
 	void refresh();
   void enable();
   void disable();
+  void enableBandgab();
+  void disableBandgab();
   void (*output)(bool);
 
 private:
