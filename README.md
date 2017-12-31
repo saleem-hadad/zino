@@ -10,6 +10,7 @@
 
 - Released
   + Button
+  + AnalogComparator
 - Development
   + GPIO
   + Pin
