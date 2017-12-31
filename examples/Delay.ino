@@ -12,6 +12,9 @@ void callback()
 void setup()
 {
   myDelay.init(1000); //default duration is 1000 ms.
+  // myDelay.enable();
+  // myDelay.disable();
+
   myDelay.callback = callback;
 }
 
