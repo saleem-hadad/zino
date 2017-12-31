@@ -9,21 +9,20 @@
 > Classes
 
 - Released
-  + Button
-  + AnalogComparator
-  + Delay
+  + Button 🔲
+  + AnalogComparator 🎶
+  + Delay ⏱
 - Development
-  + GPIO
-  + Pin
-  + Blinky
+  + GPIO 🎹
+  + Pin 📍
+  + Blinky 🔮
 - Future
-  + LED
-  + DCMotor
-  + Servo
-  + Stepper
-  + EEPROM
-  + SPI
-  + I2C
-  + Serial
-  + Ultrasonic
-  + IR
+  + LED 💡
+  + DCMotor 🏍
+  + Servo ✂️
+  + Stepper 💿
+  + EEPROM 💾
+  + SPI 📲
+  + I2C 🖲
+  + Serial ☎️
+  + Ultrasonic 👁‍🗨👁‍🗨
