@@ -95,7 +95,7 @@ public:
     ---
     Use it to set the negative(-) terminal of the
     comparator which is Pin6 on PortD as the
-    reference voltage level.
+    reference voltage level 1.1v.
   */
   void enableBandgab();
 
