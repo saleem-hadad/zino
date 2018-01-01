@@ -8,14 +8,14 @@
 #include "Pin.h"
 
 class GPIO {
-private:
-  GPIO();
 public:
     static void setup(Pin& pin, PinMode mode);
     static bool read(Pin& pin);
     static void write(Pin& pin, char value);
     static void high(Pin& pin);
     static void low(Pin& pin);
+private:
+    GPIO();
 };
 
 #endif
