@@ -18,9 +18,23 @@
 
 #include "GPIO.h"
 
-volatile unsigned char *_ddrb  = (unsigned char*) 0x24;
-volatile unsigned char *_portb = (unsigned char*) 0x25;
-volatile unsigned char *_pinb  = (unsigned char*) 0x23;
+#ifndef HAVE_GPIO_REGISTERS
+#define HAVE_GPIO_REGISTERS
+
+volatile unsigned char *pinb  = (unsigned char*) 0x23;
+volatile unsigned char *ddrb  = (unsigned char*) 0x24;
+volatile unsigned char *portb = (unsigned char*) 0x25;
+
+volatile unsigned char *pind  = (unsigned char*) 0x29;
+volatile unsigned char *ddrd  = (unsigned char*) 0x2A;
+volatile unsigned char *portd = (unsigned char*) 0x2B;
+
+volatile unsigned char *pinc  = (unsigned char*) 0x26;
+volatile unsigned char *ddrc  = (unsigned char*) 0x27;
+volatile unsigned char *portc = (unsigned char*) 0x28;
+
+#endif
+
 
 GPIO::GPIO()
 {
@@ -29,35 +43,58 @@ GPIO::GPIO()
 
 void GPIO::setup(Pin& pin, PinMode mode)
 {
-    if(mode == Output)
+    if(pin.port() == PortB)
     {
-        *_ddrb |= 1 << pin.pin();
+        if(mode == Output) {
+            *ddrb |= 1 << pin.pin();
+        }else if(mode == Input) {
+            *ddrb &= ~(1 << pin.pin());
+        }else if(mode == InputWithPullUp) {
+            *ddrb &= ~(1 << pin.pin());
+            *portb |= (1 << pin.pin());
+        }
     }
-    else if(mode == Input)
+    else if(pin.port() == PortD)
     {
-        *_ddrb &= ~(1 << pin.pin());
-    }
-    else if(mode == InputWithPullUp)
-    {
-        *_ddrb &= ~(1 << pin.pin());
-        *_portb |= (1 << pin.pin());
+        if(mode == Output) {
+            *ddrd |= 1 << pin.pin();
+        }else if(mode == Input) {
+            *ddrd &= ~(1 << pin.pin());
+        }else if(mode == InputWithPullUp) {
+            *ddrd &= ~(1 << pin.pin());
+            *portd |= (1 << pin.pin());
+        }
     }
 }
 
 bool GPIO::read(Pin& pin)
 {
-    return (*_pinb & (1 << pin.pin()));
+    if(pin.port() == PortB)
+    {
+        return (*pinb & (1 << pin.pin()));
+    }
+    else if(pin.port() == PortD)
+    {
+        return (*pind & (1 << pin.pin()));
+    }
+    else
+    {
+        //analog read
+    }
 }
 
 void GPIO::write(Pin& pin, char value)
 {
-    if(value)
+    if(pin.port() == PortB)
     {
-        *_portb |= (1 << pin.pin());
-        return;
+        if(value) *portb |= (1 << pin.pin());
+        else     *portb &= ~(1 << pin.pin());
     }
-
-    *_portb &= ~(1 << pin.pin());
+    else if(pin.port() == PortD)
+    {
+        if(value) *portd |= (1 << pin.pin());
+        else     *portd &= ~(1 << pin.pin());
+    }
 }
 
 void GPIO::high(Pin& pin)
