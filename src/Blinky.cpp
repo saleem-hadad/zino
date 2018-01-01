@@ -21,7 +21,7 @@
 
 Blinky::Blinky()
 {
-  this->init(Pin(PortB, 5), 1000, 1000);
+  //
 }
 
 void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)

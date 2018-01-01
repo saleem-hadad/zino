@@ -33,18 +33,49 @@ public:
     void
   */
 	Blinky();
-	
+
+	/*
+    init method:
+    @params:
+    Pin pin
+		unsigned int onTime
+		unsigned int offTime
+    @return:
+    void
+		---
+		Used to update the default settings of the Blinky
+		object. Please note that the onTime and offTime
+		both are in ms, e.g. 1 s = to 1000 ms.
+  */
 	void init(Pin pin, unsigned int onTime, unsigned int offTime);
+
+	/*
+    refresh method:
+    @params:
+    void
+    @return:
+    void
+    ---
+    Should be placed in the main loop of the program.
+  */
 	void refresh(void);
 
 
 private:
+	// The pin object used to be set as output.
 	Pin* _pin;
-  void setup(void);
+
+	// Used to handle toggelling functionality.
 	bool active = false;
+
+	// The ammount of time the pin's status is high.
   unsigned int onTime;
+
+	// The ammount of time the pin's status is low.
   unsigned int offTime;
-  unsigned long previousTime=0;
+
+	// Used to track how many ms passed.
+  unsigned long previousTime = 0;
 };
 
 #endif
