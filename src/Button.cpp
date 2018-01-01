@@ -21,42 +21,43 @@
 
 Button::Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp)
 {
-  this->_pin = pin;
-  this->_debouncePeriod = debouncePeriod;
-  this->_defaultHigh = defaultHigh;
+    this->_pin = pin;
+    this->_debouncePeriod = debouncePeriod;
+    this->_defaultHigh = defaultHigh;
 
-  if (withPullUp) {
-    GPIO::setup(pin, InputWithPullUp);
-  }
-  else
-  {
+    if (withPullUp)
+    {
+        GPIO::setup(pin, InputWithPullUp);
+        return;
+    }
+
     GPIO::setup(pin, Input);
-  }
 }
 
 void Button::refresh()
 {
-  if(this->_waiting)
-  {
-    if(millis() - this->_pressed_time >= this->_debouncePeriod)
+    if(this->_waiting)
     {
-      this->_waiting = false;
-      bool current = GPIO::read(this->_pin);
-      if(current)
-      {
-        if(this->pressed) (*this->pressed)();
-      }
-      this->_previous = current;
+        if(millis() - this->_pressed_time >= this->_debouncePeriod)
+        {
+            this->_waiting = false;
+            bool current = GPIO::read(this->_pin);
+
+            if(current && this->pressed) {
+                (*this->pressed)();
+            }
+            
+            this->_previous = current;
+        }
     }
-  }
-  else
-  {
-    bool current = GPIO::read(this->_pin);
-    if(current && ! this->_previous)
+    else
     {
-      this->_pressed_time = millis();
-      this->_waiting = true;
+        bool current = GPIO::read(this->_pin);
+        if(current && ! this->_previous)
+        {
+            this->_pressed_time = millis();
+            this->_waiting = true;
+        }
+        this->_previous = current;
     }
-    this->_previous = current;
-  }
 }

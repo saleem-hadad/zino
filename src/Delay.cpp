@@ -1,41 +1,55 @@
-//
-// Created by Saleem Hadad on 1/1/2018.
-//
+/*
+ .----------------.  .----------------.  .-----------------. .----------------.
+| .--------------. || .--------------. || .--------------. || .--------------. |
+| |   ________   | || |     _____    | || | ____  _____  | || |     ____     | |
+| |  |  __   _|  | || |    |_   _|   | || ||_   \|_   _| | || |   .'    `.   | |
+| |  |_/  / /    | || |      | |     | || |  |   \ | |   | || |  /  .--.  \  | |
+| |     .'.' _   | || |      | |     | || |  | |\ \| |   | || |  | |    | |  | |
+| |   _/ /__/ |  | || |     _| |_    | || | _| |_\   |_  | || |  \  `--'  /  | |
+| |  |________|  | || |    |_____|   | || ||_____|\____| | || |   `.____.'   | |
+| |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'
+
+ Created by: Saleem Hadad
+ Date: 1/1/2018
+ Github: https://github.com/saleem-hadad/zino
+*/
 
 #include "Delay.h"
 #include <Arduino.h>
 
 Delay::Delay()
 {
-  this->init(this->_threshold);
+    this->init(this->_threshold);
 }
 
 Delay::Delay(int duration)
 {
-  this->init(duration);
+    this->init(duration);
 }
 
 void Delay::init(int duration)
 {
-  this->_threshold = duration;
+    this->_threshold = duration;
 }
 
 void Delay::refresh()
 {
-  if(! this->_enabled) { return; }
+    if(! this->_enabled) { return; }
 
-  if(int(millis() - this->_previous) > this->_threshold){
-    if(this->callback) (*this->callback)();
-    this->_previous = millis();
-  }
+    if(int(millis() - this->_previous) > this->_threshold){
+        if(this->callback) (*this->callback)();
+        this->_previous = millis();
+    }
 }
 
 void Delay::enable()
 {
-  this->_enabled = true;
+    this->_enabled = true;
 }
 
 void Delay::disable()
 {
-  this->_enabled = false;
+    this->_enabled = false;
 }

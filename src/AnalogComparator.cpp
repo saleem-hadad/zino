@@ -21,55 +21,54 @@
 
 AnalogComparator::AnalogComparator()
 {
-  this->enable();
-  this->enableBandgab();
+    this->enable();
+    this->enableBandgab();
 }
 
 AnalogComparator::AnalogComparator(bool enabled, bool bandgabSelected)
 {
-  if(enabled) this->enable();
-  if(bandgabSelected) this->enableBandgab();
+    if(enabled) this->enable();
+    if(bandgabSelected) this->enableBandgab();
 }
 
 void AnalogComparator::init(bool enabled, bool bandgabSelected)
 {
-  if(enabled) this->enable();
-  if(bandgabSelected) this->enableBandgab();
+    if(enabled) this->enable();
+    if(bandgabSelected) this->enableBandgab();
 }
 
 void AnalogComparator::refresh()
 {
-  if(this->aboveThreshold())
-  {
-    if (this->callback) (*this->callback)(true);
+    if(this->aboveThreshold())
+    {
+        if (this->callback) (*this->callback)(true);
+        return;
+    }
 
-    return;
-  }
-
-  if (this->callback) (*this->callback)(false);
+    if (this->callback) (*this->callback)(false);
 }
 
 void AnalogComparator::enable()
 {
-  *this->_acsr &= ~(1 << this->_acd);
+    *this->_acsr &= ~(1 << this->_acd);
 }
 
 void AnalogComparator::disable()
 {
-  *this->_acsr |= (1 << this->_acd);
+    *this->_acsr |= (1 << this->_acd);
 }
 
 void AnalogComparator::enableBandgab()
 {
-  *this->_acsr |= (1 << this->_acbg);
+    *this->_acsr |= (1 << this->_acbg);
 }
 
 void AnalogComparator::disableBandgab()
 {
-  *this->_acsr &= ~(1 << this->_acbg);
+    *this->_acsr &= ~(1 << this->_acbg);
 }
 
 bool AnalogComparator::aboveThreshold()
 {
-  return (*this->_acsr & (1 << this->_aco)) == 0;
+    return (*this->_acsr & (1 << this->_aco)) == 0;
 }
