@@ -35,29 +35,29 @@ public:
 	Blinky();
 
 	/*
-    init method:
-    @params:
-    Pin pin
+  init method:
+  @params:
+  Pin pin
 	unsigned int onTime
 	unsigned int offTime
-    @return:
-    void
+  @return:
+  void
 	---
 	Used to update the default settings of the Blinky
 	object. Please note that the onTime and offTime
 	both are in ms, e.g. 1 s = to 1000 ms.
-  	*/
+	*/
 	void init(Pin pin, unsigned int onTime, unsigned int offTime);
 
 	/*
-    refresh method:
-    @params:
-    void
-    @return:
-    void
-    ---
-    Should be placed in the main loop of the program.
-  	*/
+  refresh method:
+  @params:
+  void
+  @return:
+  void
+  ---
+  Should be placed in the main loop of the program.
+	*/
 	void refresh(void);
 
 private:
