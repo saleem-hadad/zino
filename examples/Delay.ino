@@ -6,20 +6,20 @@ Delay myDelay(1000);
 
 void callback()
 {
-  //Do your stuff
+    //Do your stuff
 }
 
 void setup()
 {
-  myDelay.init(1000); //default duration is 1000 ms.
-  // myDelay.enable();
-  // myDelay.disable();
+    myDelay.init(1000); //default duration is 1000 ms.
+    // myDelay.enable();
+    // myDelay.disable();
 
-  myDelay.callback = callback;
+    myDelay.callback = callback;
 }
 
 void loop()
 {
-  myDelay.refresh();
-  //Other stuff goes here
+    myDelay.refresh();
+    //Other stuff goes here
 }

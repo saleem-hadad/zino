@@ -7,20 +7,20 @@ AnalogComparator comparator;
 
 void comparatorCallback(bool aboveThreshold)
 {
-  if (! aboveThreshold) { return; }
+    if (! aboveThreshold) { return; }
 
-  //blink LED only if the comparatorOutput aboveThreshold
-  led.refresh();
+    //blink LED only if the comparatorOutput aboveThreshold
+    led.refresh();
 }
 
 void setup()
 {
-  comparator.init(true, true); //enabled, bandgabSelected
-  comparator.callback = comparatorCallback; // very important
-  led.init(Pin(PortB, 0), 600, 650);
+    comparator.init(true, true); //enabled, bandgabSelected
+    comparator.callback = comparatorCallback; // very important
+    led.init(Pin(PortB, 0), 600, 650);
 }
 
 void loop()
 {
-  comparator.refresh();
+    comparator.refresh();
 }
