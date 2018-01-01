@@ -18,6 +18,7 @@
 
 #include "Blinky.h"
 #include <Arduino.h>
+#include "GPIO.h"
 
 Blinky::Blinky()
 {
@@ -30,7 +31,7 @@ void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
     this->onTime  = onTime;
     this->offTime = offTime;
 
-    GPIO::setup(pin, Output);
+    GPIO::shared()->setup(pin, Output);
 }
 
 void Blinky::refresh(void)
@@ -43,7 +44,7 @@ void Blinky::refresh(void)
         {
             this->active = true;
             this->previousTime = currentTime;
-            GPIO::high(*this->_pin);
+            GPIO::shared()->high(*this->_pin);
         }
     }
     else
@@ -52,7 +53,7 @@ void Blinky::refresh(void)
         {
             this->active = false;
             this->previousTime = currentTime;
-            GPIO::low(*this->_pin);
+            GPIO::shared()->low(*this->_pin);
         }
     }
 }

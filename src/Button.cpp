@@ -18,6 +18,7 @@
 
 #include "Button.h"
 #include <Arduino.h>
+#include "GPIO.h"
 
 Button::Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp)
 {
@@ -27,11 +28,11 @@ Button::Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp)
 
     if (withPullUp)
     {
-        GPIO::setup(pin, InputWithPullUp);
+        GPIO::shared()->setup(pin, InputWithPullUp);
         return;
     }
 
-    GPIO::setup(pin, Input);
+    GPIO::shared()->setup(pin, Input);
 }
 
 void Button::refresh()
@@ -41,18 +42,18 @@ void Button::refresh()
         if(millis() - this->_pressed_time >= this->_debouncePeriod)
         {
             this->_waiting = false;
-            bool current = GPIO::read(this->_pin);
+            bool current = GPIO::shared()->read(this->_pin);
 
             if(current && this->pressed) {
                 (*this->pressed)();
             }
-            
+
             this->_previous = current;
         }
     }
     else
     {
-        bool current = GPIO::read(this->_pin);
+        bool current = GPIO::shared()->read(this->_pin);
         if(current && ! this->_previous)
         {
             this->_pressed_time = millis();

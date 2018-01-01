@@ -20,7 +20,6 @@
 #define ZINO_Blinky_h
 
 #include "Pin.h"
-#include "GPIO.h"
 
 class Blinky
 {

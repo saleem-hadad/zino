@@ -20,7 +20,6 @@
 #define ZINO_BUTTON_H
 
 #include "Pin.h"
-#include "GPIO.h"
 
 class Button
 {
