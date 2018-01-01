@@ -20,7 +20,7 @@
 #include <Arduino.h>
 #include "GPIO.h"
 
-Button::Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp)
+Button::Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp): _pin(pin)
 {
     this->_pin = pin;
     this->_debouncePeriod = debouncePeriod;
