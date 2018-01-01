@@ -1,0 +1,12 @@
+{
+  "name": "Zino",
+  "keywords": "arduino c++, button, led, servo, delay, blinky",
+  "description": "High level custom C++ based Arduino library",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/saleem-hadad/zino"
+  },
+  "frameworks": "arduino",
+  "platforms": ["atmelavr"]
+}
