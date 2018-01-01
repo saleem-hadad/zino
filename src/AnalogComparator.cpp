@@ -41,12 +41,12 @@ void AnalogComparator::refresh()
 {
   if(this->aboveThreshold())
   {
-    if (this->output) (*this->output)(true);
+    if (this->callback) (*this->callback)(true);
 
     return;
   }
 
-  if (this->output) (*this->output)(false);
+  if (this->callback) (*this->callback)(false);
 }
 
 void AnalogComparator::enable()

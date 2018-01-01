@@ -5,7 +5,7 @@
 Blinky led;
 AnalogComparator comparator;
 
-void comparatorOutput(bool aboveThreshold)
+void comparatorCallback(bool aboveThreshold)
 {
   if (! aboveThreshold) { return; }
 
@@ -16,7 +16,7 @@ void comparatorOutput(bool aboveThreshold)
 void setup()
 {
   comparator.init(true, true); //enabled, bandgabSelected
-  comparator.output = comparatorOutput; // very important
+  comparator.callback = comparatorCallback; // very important
   led.init(Pin(PortB, 0), 600, 650);
 }
 
