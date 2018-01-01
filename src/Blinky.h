@@ -35,13 +35,13 @@ public:
 	Blinky();
 
 	/*
-  init method:
-  @params:
-  Pin pin
+	init method:
+	@params:
+	Pin pin
 	unsigned int onTime
 	unsigned int offTime
-  @return:
-  void
+	@return:
+	void
 	---
 	Used to update the default settings of the Blinky
 	object. Please note that the onTime and offTime
@@ -50,13 +50,13 @@ public:
 	void init(Pin pin, unsigned int onTime, unsigned int offTime);
 
 	/*
-  refresh method:
-  @params:
-  void
-  @return:
-  void
-  ---
-  Should be placed in the main loop of the program.
+	refresh method:
+	@params:
+	void
+	@return:
+	void
+	---
+	Should be placed in the main loop of the program.
 	*/
 	void refresh(void);
 
@@ -68,13 +68,13 @@ private:
 	bool active = false;
 
 	// The amount of time the pin's status is high.
-  unsigned int onTime;
+	unsigned int onTime;
 
 	// The amount of time the pin's status is low.
-  unsigned int offTime;
+	unsigned int offTime;
 
 	// Used to track how many ms passed.
-  unsigned long previousTime = 0;
+	unsigned long previousTime = 0;
 };
 
 #endif
