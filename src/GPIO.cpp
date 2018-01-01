@@ -16,49 +16,56 @@
  Github: https://github.com/saleem-hadad/zino
 */
 
-#include "Button.h"
-#include <Arduino.h>
 #include "GPIO.h"
 
-Button::Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp)
-{
-    this->_pin = pin;
-    this->_debouncePeriod = debouncePeriod;
-    this->_defaultHigh = defaultHigh;
+volatile unsigned char *_ddrb  = (unsigned char*) 0x24;
+volatile unsigned char *_portb = (unsigned char*) 0x25;
+volatile unsigned char *_pinb  = (unsigned char*) 0x23;
 
-    if (withPullUp)
+GPIO::GPIO()
+{
+    //
+}
+
+void GPIO::setup(Pin& pin, PinMode mode)
+{
+    if(mode == Output)
     {
-        GPIO::setup(pin, InputWithPullUp);
+        *_ddrb |= 1 << pin.pin();
+    }
+    else if(mode == Input)
+    {
+        *_ddrb &= ~(1 << pin.pin());
+    }
+    else if(mode == InputWithPullUp)
+    {
+        *_ddrb &= ~(1 << pin.pin());
+        *_portb |= (1 << pin.pin());
+    }
+}
+
+bool GPIO::read(Pin& pin)
+{
+    return (*_pinb & (1 << pin.pin()));
+}
+
+void GPIO::write(Pin& pin, char value)
+{
+    if(value)
+    {
+        *_portb |= (1 << pin.pin());
         return;
     }
 
-    GPIO::setup(pin, Input);
+    *_portb &= ~(1 << pin.pin());
 }
 
-void Button::refresh()
+void GPIO::high(Pin& pin)
 {
-    if(this->_waiting)
-    {
-        if(millis() - this->_pressed_time >= this->_debouncePeriod)
-        {
-            this->_waiting = false;
-            bool current = GPIO::read(this->_pin);
+    GPIO::write(pin, 1);
+}
 
-            if(current && this->pressed) {
-                (*this->pressed)();
-            }
-
-            this->_previous = current;
-        }
-    }
-    else
-    {
-        bool current = GPIO::read(this->_pin);
-        if(current && ! this->_previous)
-        {
-            this->_pressed_time = millis();
-            this->_waiting = true;
-        }
-        this->_previous = current;
-    }
+void GPIO::low(Pin& pin)
+{
+    GPIO::write(pin, 0);
 }

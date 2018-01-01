@@ -17,35 +17,12 @@
 */
 
 #ifndef ZINO_GPIO_H
-#define ZINO_GPIO_H 1
+#define ZINO_GPIO_H
 
 #include "Pin.h"
 
 class GPIO {
-    // static GPIO* _instance;
 public:
-    /*
-    shared static method:
-    @params:
-    void
-    @return:
-    GPIO*
-    ---
-
-	*/
-    static GPIO* shared()
-    {
-        // if(_instance != nullptr){
-        //     return _instance;
-        // }
-        // GPIO io;
-        // _instance = &io;
-        // return _instance;
-
-        static GPIO _instance;
-        return &_instance;
-    }
-
     /*
     setup static method:
     @params:
@@ -57,22 +34,7 @@ public:
     Use it to setup the needed pin mode to the
     selected pin & port on the Arduino board
 	*/
-    void setup(Pin& pin, PinMode mode)
-    {
-        if(mode == Output)
-        {
-            *this->_ddrb |= 1 << pin.pin();
-        }
-        else if(mode == Input)
-        {
-            *this->_ddrb &= ~(1 << pin.pin());
-        }
-        else if(mode == InputWithPullUp)
-        {
-            *this->_ddrb &= ~(1 << pin.pin());
-            *this->_portb |= (1 << pin.pin());
-        }
-    }
+    static void setup(Pin& pin, PinMode mode);
 
     /*
     read static method:
@@ -84,10 +46,7 @@ public:
     Use it to read the current status of a given
     pin on a spicific digital port, e.g. PortB
 	*/
-    bool read(Pin& pin)
-    {
-        return (*this->_pinb & (1 << pin.pin()));
-    }
+    static bool read(Pin& pin);
 
     /*
     write static method:
@@ -100,16 +59,7 @@ public:
     Use it to write digital or analog values to
     any pin on given a digital/analog port.
 	*/
-    void write(Pin& pin, char value)
-    {
-        if(value)
-        {
-            *_portb |= (1 << pin.pin());
-            return;
-        }
-
-        *_portb &= ~(1 << pin.pin());
-    }
+    static void write(Pin& pin, char value);
 
     /*
     high static method:
@@ -121,10 +71,7 @@ public:
     Use it as a shortcut to write high value to
     any pin on a given digital port only.
 	*/
-    void high(Pin& pin)
-    {
-        this->write(pin, 1);
-    }
+    static void high(Pin& pin);
 
     /*
     low static method:
@@ -136,23 +83,16 @@ public:
     Use it as a shortcut to write low value to
     any pin on a given digital port only.
 	*/
-    void low(Pin& pin)
-    {
-        this->write(pin, 0);
-    }
+    static void low(Pin& pin);
 private:
-    GPIO(){}
-    unsigned char *_ddrb  = (unsigned char*) 0x24;
-    unsigned char *_portb = (unsigned char*) 0x25;
-    unsigned char *_pinb  = (unsigned char*) 0x23;
-
-    unsigned char *_ddrd  = (unsigned char*) 0x24;
-    unsigned char *_portd = (unsigned char*) 0x25;
-    unsigned char *_pind  = (unsigned char*) 0x23;
-
-    unsigned char *_ddrc  = (unsigned char*) 0x24;
-    unsigned char *_portc = (unsigned char*) 0x25;
-    unsigned char *_pinc  = (unsigned char*) 0x23;
+    /*
+    private constructor:
+    @params:
+    void
+    @return:
+    void
+	*/
+    GPIO();
 };
 
 #endif

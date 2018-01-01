@@ -31,7 +31,7 @@ void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
     this->onTime  = onTime;
     this->offTime = offTime;
 
-    GPIO::shared()->setup(pin, Output);
+    GPIO::setup(pin, Output);
 }
 
 void Blinky::refresh(void)
@@ -44,7 +44,7 @@ void Blinky::refresh(void)
         {
             this->active = true;
             this->previousTime = currentTime;
-            GPIO::shared()->high(*this->_pin);
+            GPIO::high(*this->_pin);
         }
     }
     else
@@ -53,7 +53,7 @@ void Blinky::refresh(void)
         {
             this->active = false;
             this->previousTime = currentTime;
-            GPIO::shared()->low(*this->_pin);
+            GPIO::low(*this->_pin);
         }
     }
 }
