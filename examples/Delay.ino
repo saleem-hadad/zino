@@ -4,7 +4,6 @@
 Delay myDelay;       // default duration 1000 ms.
 // Delay myDelay(1000); //Other initialization
 
-
 void callback()
 {
     Serial.println("delay fired 🔥");
