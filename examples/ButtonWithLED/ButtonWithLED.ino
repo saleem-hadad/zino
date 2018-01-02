@@ -9,6 +9,9 @@ LED led;
 void buttonPressed()
 {
     led.toggle();
+    // Other methods 👇
+    // led.on();
+    // led.off();
 }
 
 void setup()
