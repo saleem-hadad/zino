@@ -31,7 +31,5 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
   + Servo ✂️
   + Stepper 💿
   + EEPROM 💾
-  + SPI 📲
-  + I2C 🖲
   + Serial ☎️
   + Ultrasonic 👁‍🗨👁‍🗨
