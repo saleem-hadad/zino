@@ -76,6 +76,9 @@ private:
 	// Set if the default reading from the pin is heigh.
 	bool _defaultHigh;
 
+	// Used to track if the button object initialized or not.
+	bool _initialized = false;
+
 	/*
 	Used as a trigger to indicate if the button has been
 	pressed or not so that a new logic will happened.

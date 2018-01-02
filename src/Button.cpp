@@ -30,6 +30,7 @@ void Button::init(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullU
     this->_pin = &pin;
     this->_debouncePeriod = debouncePeriod;
     this->_defaultHigh = defaultHigh;
+    this->_initialized = true;
 
     if (withPullUp)
     {
@@ -42,6 +43,8 @@ void Button::init(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullU
 
 void Button::refresh()
 {
+    if(! this->_initialized) { return; }
+
     if(this->_waiting)
     {
         if(millis() - this->_pressed_time >= this->_debouncePeriod)

@@ -20,39 +20,39 @@
 #include <Arduino.h>
 #include "GPIO.h"
 
-Blinky::Blinky()
-{
-    //
-}
+Blinky::Blinky(){}
 
 void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
 {
     this->_pin    = &pin;
-    this->onTime  = onTime;
-    this->offTime = offTime;
+    this->_onTime  = onTime;
+    this->_offTime = offTime;
+    this->_initialized = true;
 
     GPIO::setup(pin, Output);
 }
 
 void Blinky::refresh(void)
 {
+    if(! this->_initialized) { return; }
+
     unsigned long currentTime = millis();
 
-    if(! this->active)
+    if(! this->_active)
     {
-        if (currentTime - this->previousTime >= this->offTime)
+        if (currentTime - this->_previousTime >= this->_offTime)
         {
-            this->active = true;
-            this->previousTime = currentTime;
+            this->_active = true;
+            this->_previousTime = currentTime;
             GPIO::high(*this->_pin);
         }
     }
     else
     {
-        if(currentTime - this->previousTime >= this->onTime)
+        if(currentTime - this->_previousTime >= this->_onTime)
         {
-            this->active = false;
-            this->previousTime = currentTime;
+            this->_active = false;
+            this->_previousTime = currentTime;
             GPIO::low(*this->_pin);
         }
     }

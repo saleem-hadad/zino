@@ -63,17 +63,20 @@ private:
 	// The pin object used to be set as output.
 	Pin* _pin;
 
+	// Used to track if the blinky object initialized or not.
+	bool _initialized = false;
+
 	// Used to handle toggling functionality.
-	bool active = false;
+	bool _active = false;
 
 	// The amount of time the pin's status is high.
-	unsigned int onTime;
+	unsigned int _onTime;
 
 	// The amount of time the pin's status is low.
-	unsigned int offTime;
+	unsigned int _offTime;
 
 	// Used to track how many ms passed.
-	unsigned long previousTime = 0;
+	unsigned long _previousTime = 0;
 };
 
 #endif
