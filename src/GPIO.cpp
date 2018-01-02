@@ -69,17 +69,10 @@ void GPIO::setup(Pin& pin, PinMode mode)
 
 bool GPIO::read(Pin& pin)
 {
-    if(pin.port() == PortB)
-    {
+    if (pin.port() == PortB) {
         return (*pinb & (1 << pin.pin()));
-    }
-    else if(pin.port() == PortD)
-    {
+    }else if(pin.port() == PortB){
         return (*pind & (1 << pin.pin()));
-    }
-    else
-    {
-        //analog read
     }
 }
 

@@ -2,7 +2,7 @@
 #include <Button.h>
 #include <Pin.h>
 
-Button button(Pin(PortB, 5), 40, false, false);
+Button button;
 
 void buttonPressed()
 {
@@ -12,6 +12,7 @@ void buttonPressed()
 void setup()
 {
     Serial.begin(9600);
+    button.init(Pin(PortB, 5), 40, false, false);
     button.pressed = buttonPressed;
 }
 

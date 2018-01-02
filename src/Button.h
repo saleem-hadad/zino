@@ -27,6 +27,15 @@ public:
 	/*
 	Button constructor:
 	@params:
+	void
+	@return:
+	void
+	*/
+	Button();
+
+	/*
+	init method:
+	@params:
 	Pin pin
 	char debouncePeriod
 	bool defaultHigh
@@ -34,7 +43,7 @@ public:
 	@return:
 	void
 	*/
-	Button(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp);
+	void init(Pin pin, char debouncePeriod, bool defaultHigh, bool withPullUp);
 
 	/*
 	refresh method:
@@ -48,21 +57,21 @@ public:
 	void refresh();
 
 	/*
-      pressed pointer function:
-      @params:
-      void
-      @return:
-      void
-      ---
-      Used as callback function to higher level where you
-      can get a notification when the button has been
-	  pressed, keep in mine no bouncing here 😏.
+	pressed pointer function:
+	@params:
+	void
+	@return:
+	void
+	---
+	Used as callback function to higher level where you
+	can get a notification when the button has been
+	pressed, keep in mine no bouncing here 😏.
     */
 	void (*pressed)(void);
 
 private:
 	// The pin object used to be set as input w/o pullup.
-	Pin& _pin;
+	Pin* _pin;
 
 	// Set if the default reading from the pin is heigh.
 	bool _defaultHigh;

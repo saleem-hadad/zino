@@ -4,17 +4,20 @@
 #include <Pin.h>
 
 Blinky leds[5];
-Button button(Pin(PortB, 5), 40, false, false);
+Button button;
 
 void buttonPressed()
 {
-    Serial.println("Button has been pressed :)");
+    Serial.println("Button has been pressed 🔥");
 }
 
 void setup()
 {
     Serial.begin(9600);
+
+    button.init(Pin(PortB, 5), 40, false, false);
     button.pressed = buttonPressed;
+
     leds[0].init(Pin(PortB, 0), 600, 650);
     leds[1].init(Pin(PortB, 1), 700, 100);
     leds[2].init(Pin(PortB, 2), 300, 540);
