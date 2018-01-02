@@ -23,9 +23,9 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
   + Delay ⏱
   + Blinky 🔮
   + Pin 📍
+  + LED 💡
 - Development
   + GPIO 🎹
-  + LED 💡
 - Future
   + DCMotor 🏍
   + Servo ✂️
