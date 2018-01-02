@@ -57,3 +57,13 @@ void Blinky::refresh(void)
         }
     }
 }
+
+void Blinky::setOnTime(unsigned int onTime)
+{
+    this->_onTime  = onTime;
+}
+
+void Blinky::setOffTime(unsigned int offTime)
+{
+    this->_offTime = offTime;
+}

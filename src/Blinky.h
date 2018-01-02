@@ -59,6 +59,33 @@ public:
 	*/
 	void refresh(void);
 
+	/*
+	setOnTime method:
+	@params:
+	Pin pin
+	unsigned int onTime
+	@return:
+	void
+	---
+	Used to update the amount of time the pin will
+	set as High. Please note that the value of
+	onTime in ms, e.g. 1 s equal to 1000 ms.
+	*/
+	void setOnTime(unsigned int onTime);
+
+	/*
+	setOnTime method:
+	@params:
+	Pin pin
+	unsigned int onTime
+	@return:
+	void
+	---
+	Used to update the amount of time the pin will
+	set as Low. Please note that the value of
+	offTime in ms, e.g. 1 s = to 1000 ms.
+	*/
+	void setOffTime(unsigned int offTime);
 private:
 	// The pin object used to be set as output.
 	Pin* _pin;
