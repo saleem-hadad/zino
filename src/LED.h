@@ -12,48 +12,78 @@
  '----------------'  '----------------'  '----------------'  '----------------'
 
  Created by: Saleem Hadad
- Date: 30/12/2017
+ Date: 2/1/2018
  Github: https://github.com/saleem-hadad/zino
 */
 
-#include "Blinky.h"
-#include <Arduino.h>
-#include "GPIO.h"
+#ifndef ZINO_LED_H
+#define ZINO_LED_H
 
-Blinky::Blinky(){}
+#include "Pin.h"
 
-void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
+class LED
 {
-    this->_pin = &pin;
-    this->_onTime  = onTime;
-    this->_offTime = offTime;
-    this->_initialized = true;
+public:
+	/*
+	LED constructor:
+	@params:
+	void
+	@return:
+	void
+	*/
+	LED();
 
-    GPIO::setup(pin, Output);
-}
+	/*
+	init method:
+	@params:
+	Pin pin
+	@return:
+	void
+	---
+	*/
+	void init(Pin pin);
 
-void Blinky::refresh(void)
-{
-    if(! this->_initialized) { return; }
+    /*
+    on method:
+    @params:
+    void
+    @return:
+    void
+    ---
+    */
+    void on();
 
-    unsigned long currentTime = millis();
+    /*
+    off method:
+    @params:
+    void
+    @return:
+    void
+    ---
+    */
+    void off();
 
-    if(! this->_active)
-    {
-        if (currentTime - this->_previousTime >= this->_offTime)
-        {
-            this->_active = true;
-            this->_previousTime = currentTime;
-            GPIO::high(*this->_pin);
-        }
-    }
-    else
-    {
-        if(currentTime - this->_previousTime >= this->_onTime)
-        {
-            this->_active = false;
-            this->_previousTime = currentTime;
-            GPIO::low(*this->_pin);
-        }
-    }
-}
+    /*
+    toggle method:
+    @params:
+    void
+    @return:
+    void
+    ---
+    */
+    void toggle();
+private:
+    enum LEDStatus {
+        On,
+        Off
+    };
+	// The pin object used to be set as output.
+	Pin* _pin;
+
+    LEDStatus _status = Off;
+
+	// Used to track if the blinky object initialized or not.
+	bool _initialized = false;
+};
+
+#endif

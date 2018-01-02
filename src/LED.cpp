@@ -12,48 +12,47 @@
  '----------------'  '----------------'  '----------------'  '----------------'
 
  Created by: Saleem Hadad
- Date: 30/12/2017
+ Date: 2/1/2018
  Github: https://github.com/saleem-hadad/zino
 */
 
-#include "Blinky.h"
-#include <Arduino.h>
+#include "LED.h"
 #include "GPIO.h"
 
-Blinky::Blinky(){}
+LED::LED(){}
 
-void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
+void LED::init(Pin pin)
 {
     this->_pin = &pin;
-    this->_onTime  = onTime;
-    this->_offTime = offTime;
     this->_initialized = true;
 
     GPIO::setup(pin, Output);
 }
 
-void Blinky::refresh(void)
+void LED::on()
 {
     if(! this->_initialized) { return; }
 
-    unsigned long currentTime = millis();
+    this->_status = On;
+    GPIO::high(*this->_pin);
+}
 
-    if(! this->_active)
-    {
-        if (currentTime - this->_previousTime >= this->_offTime)
-        {
-            this->_active = true;
-            this->_previousTime = currentTime;
-            GPIO::high(*this->_pin);
-        }
+void LED::off()
+{
+    if(! this->_initialized) { return; }
+
+    this->_status = Off;
+    GPIO::low(*this->_pin);
+}
+
+void LED::toggle()
+{
+    if(! this->_initialized) { return; }
+
+    if(this->_status == On){
+        this->off();
+        return;
     }
-    else
-    {
-        if(currentTime - this->_previousTime >= this->_onTime)
-        {
-            this->_active = false;
-            this->_previousTime = currentTime;
-            GPIO::low(*this->_pin);
-        }
-    }
+
+    this->on();
 }
