@@ -40,6 +40,7 @@ public:
 	@return:
 	void
 	---
+	Used to set the pin of the LED as Output.
 	*/
 	void init(Pin pin);
 
@@ -50,6 +51,7 @@ public:
     @return:
     void
     ---
+	Used to turn on the led.
     */
     void on();
 
@@ -60,6 +62,7 @@ public:
     @return:
     void
     ---
+	Used to turn off the led.
     */
     void off();
 
@@ -70,6 +73,9 @@ public:
     @return:
     void
     ---
+	Used to toggle the current status of the LED
+	if it's currently on, it becomes off and
+	if it's currently off, becomes on :D
     */
     void toggle();
 private:
@@ -77,9 +83,11 @@ private:
         On,
         Off
     };
+
 	// The pin object used to be set as output.
 	Pin* _pin;
 
+	// Used to track the current status of the LED, default off.
     LEDStatus _status = Off;
 
 	// Used to track if the blinky object initialized or not.
