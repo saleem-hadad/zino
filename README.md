@@ -27,8 +27,8 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
   + LED 💡
 - Development
   + GPIO 🎹
-- Future
   + DCMotor 🏍
+- Future
   + Servo ✂️
   + Stepper 💿
   + EEPROM 💾
