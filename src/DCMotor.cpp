@@ -43,6 +43,9 @@ void DCMotor::setDutyCycle(double dutyCycle)
 {
     if(! this->_initialized) { return; }
 
+    if(dutyCycle >= 1) dutyCycle = 1;
+    if(dutyCycle <= 0) dutyCycle = 0;
+
     this->_blinker.setOnTime(this->_period * dutyCycle);
     this->_blinker.setOffTime(this->_period - (this->_period * dutyCycle));
 }
