@@ -3,6 +3,7 @@
 # 𝔃ino ❤︎
 ## My custom C++ based Arduino Library
 ### NO DELAY, blah 😝
+### ZERO COMPILER WARNING 😈
 
 > Note
 
