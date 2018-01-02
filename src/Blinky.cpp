@@ -40,7 +40,7 @@ void Blinky::refresh(void)
 
     if(! this->_active)
     {
-        if (currentTime - this->_previousTime >= this->_offTime)
+        if ((currentTime - this->_previousTime) >= this->_offTime)
         {
             this->_active = true;
             this->_previousTime = currentTime;
@@ -49,7 +49,7 @@ void Blinky::refresh(void)
     }
     else
     {
-        if(currentTime - this->_previousTime >= this->_onTime)
+        if((currentTime - this->_previousTime) >= this->_onTime)
         {
             this->_active = false;
             this->_previousTime = currentTime;
@@ -60,7 +60,7 @@ void Blinky::refresh(void)
 
 void Blinky::setOnTime(unsigned int onTime)
 {
-    this->_onTime  = onTime;
+    this->_onTime = onTime;
 }
 
 void Blinky::setOffTime(unsigned int offTime)
