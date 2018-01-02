@@ -10,7 +10,7 @@ double dutyCycle = 0;
 void callback()
 {
     if(dutyCycle > 1) dutyCycle = 0;
-    dutyCycle += 0.1; // Increase the dutyCycle each 1s
+    dutyCycle += 0.1; // Increase the dutyCycle by 0.1 each 1s
 
     motor.setDutyCycle(dutyCycle);
 }
