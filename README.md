@@ -22,11 +22,11 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
   + AnalogComparator 🎶
   + Delay ⏱
   + Blinky 🔮
+  + Pin 📍
 - Development
   + GPIO 🎹
-  + Pin 📍
-- Future
   + LED 💡
+- Future
   + DCMotor 🏍
   + Servo ✂️
   + Stepper 💿
