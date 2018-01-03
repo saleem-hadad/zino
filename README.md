@@ -25,9 +25,9 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
   + Blinky 🔮
   + Pin 📍
   + LED 💡
-  + DCMotor 🏍
 - Development
   + GPIO 🎹
+  + DCMotor 🏍
   + AnalogController
 - Future
   + Servo ✂️
