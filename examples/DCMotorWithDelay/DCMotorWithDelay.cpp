@@ -16,7 +16,7 @@ void callback()
 
 void setup()
 {
-    motor.init(Pin(PortB, 4), 100);
+    motor.init(Pin(PortB, 4), 150);
     motor.setDutyCycle(0);
 
     myDelay.callback = callback;
