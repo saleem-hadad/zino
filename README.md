@@ -28,6 +28,7 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
   + DCMotor 🏍
 - Development
   + GPIO 🎹
+  + AnalogController
 - Future
   + Servo ✂️
   + Stepper 💿

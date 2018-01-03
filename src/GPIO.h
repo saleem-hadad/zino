@@ -41,12 +41,13 @@ public:
     @params:
     Pin& pin
     @return:
-    bool
+    int
     ---
     Use it to read the current status of a given
-    pin on a spicific digital port, e.g. PortB
+    pin on any given port, e.g. PortB, C, D
 	*/
-    static bool read(Pin& pin);
+    static int read(Pin& pin);
+    static int analogRead(char pin);
 
     /*
     write static method:

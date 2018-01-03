@@ -33,6 +33,11 @@ volatile unsigned char *pinc  = (unsigned char*) 0x26;
 volatile unsigned char *ddrc  = (unsigned char*) 0x27;
 volatile unsigned char *portc = (unsigned char*) 0x28;
 
+volatile unsigned char* admux = (unsigned char*) 0x7C;
+volatile unsigned char*adcsra = (unsigned char*) 0x7A;
+volatile unsigned char* adch  = (unsigned char*) 0x79;
+volatile unsigned char* adcl  = (unsigned char*) 0x78;
+
 #endif
 
 
@@ -67,13 +72,34 @@ void GPIO::setup(Pin& pin, PinMode mode)
     }
 }
 
-bool GPIO::read(Pin& pin)
+int GPIO::read(Pin& pin)
 {
     if (pin.port() == PortB) {
-        return (*pinb & (1 << pin.pin()));
+        return (*pinb & (1 << pin.pin())) ? 1 : 0;
     }else if(pin.port() == PortB){
-        return (*pind & (1 << pin.pin()));
+        return (*pind & (1 << pin.pin())) ? 1 : 0;
     }
+
+    return GPIO::analogRead(pin.pin());
+}
+
+int GPIO::analogRead(char pin)
+{
+         if(pin == 0) *admux  = 0b01000000;
+    else if(pin == 1) *admux |= 0b01000001;
+    else if(pin == 2) *admux |= 0b01000010;
+    else if(pin == 3) *admux |= 0b01000011;
+    else if(pin == 4) *admux |= 0b01000100;
+    else if(pin == 5) *admux |= 0b01000101;
+    else return 0;
+
+    *adcsra = 0b11000111;
+    *adcsra |= (1 << 6);
+    while (((*adcsra) & (1 << 6))) {}
+    int lowbyte = (*adcl);
+    int highbyte = (*adch);
+    int value = ((highbyte << 8) | lowbyte);
+    return value;
 }
 
 void GPIO::write(Pin& pin, char value)
