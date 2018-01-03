@@ -104,15 +104,20 @@ int GPIO::analogRead(char pin)
 
 void GPIO::write(Pin& pin, char value)
 {
-    if(pin.port() == PortB)
-    {
-        if(value) *portb |= (1 << pin.pin());
-        else     *portb &= ~(1 << pin.pin());
-    }
-    else if(pin.port() == PortD)
-    {
-        if(value) *portd |= (1 << pin.pin());
-        else     *portd &= ~(1 << pin.pin());
+    char p = pin.pin();
+    Port port = pin.port();
+
+    switch (port) {
+        case PortB:
+            if(value) *portb |= (1 << p);
+            else     *portb &= ~(1 << p);
+            break;
+        case PortD:
+            if(value) *portd |= (1 << p);
+            else     *portd &= ~(1 << p);
+            break;
+        case PortC:
+            break;
     }
 }
 
