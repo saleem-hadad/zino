@@ -44,9 +44,21 @@ public:
     int
     ---
     Use it to read the current status of a given
-    pin on any given port, e.g. PortB, C, D
+    pin on any given port, e.g. PortB or PortD
 	*/
     static int read(Pin& pin);
+
+    /*
+    analogRead static method:
+    @params:
+    char pin
+    @return:
+    int
+    ---
+    Use it to read analog pin on PortC where you
+    can select the pin's number, later on you
+    can select the bandgap and temp sensor.
+	*/
     static int analogRead(char pin);
 
     /*
