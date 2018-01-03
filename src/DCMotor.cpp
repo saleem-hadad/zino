@@ -22,7 +22,7 @@
 
 DCMotor::DCMotor(){}
 
-void DCMotor::init(Pin pin, unsigned int frequency)
+void DCMotor::init(Pin pin, long frequency)
 {
 
     this->_pin = &pin;
@@ -37,6 +37,11 @@ void DCMotor::refresh(void)
     if(! this->_initialized) { return; }
 
     this->_blinker.refresh();
+}
+
+void DCMotor::setFrequency(long frequency)
+{
+    this->_period = 1000 / frequency;
 }
 
 void DCMotor::setDutyCycle(double dutyCycle)

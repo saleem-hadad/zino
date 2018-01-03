@@ -38,7 +38,7 @@ public:
 	init method:
 	@params:
 	Pin pin
-	unsigned int frequency
+	long frequency
 	@return:
 	void
 	---
@@ -46,7 +46,7 @@ public:
 	object. Please note that the frequency is in hz
     remember: T=1/f, e.g. f=100, period(T)=1/100
 	*/
-	void init(Pin pin, unsigned int frequency);
+	void init(Pin pin, long frequency);
 
 	/*
 	refresh method:
@@ -72,6 +72,7 @@ public:
     the pin will stay on for 0.5s and off for 0.5s
 	*/
     void setDutyCycle(double dutyCycle);
+	void setFrequency(long frequency);
 private:
 	// The pin object used to be set as output.
 	Pin* _pin;

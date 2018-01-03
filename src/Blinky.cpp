@@ -22,7 +22,7 @@
 
 Blinky::Blinky(){}
 
-void Blinky::init(Pin pin, unsigned int onTime, unsigned int offTime)
+void Blinky::init(Pin pin, unsigned long onTime, unsigned long offTime)
 {
     this->_pin = &pin;
     this->_onTime  = onTime;
@@ -58,12 +58,12 @@ void Blinky::refresh(void)
     }
 }
 
-void Blinky::setOnTime(unsigned int onTime)
+void Blinky::setOnTime(unsigned long onTime)
 {
     this->_onTime = onTime;
 }
 
-void Blinky::setOffTime(unsigned int offTime)
+void Blinky::setOffTime(unsigned long offTime)
 {
     this->_offTime = offTime;
 }
