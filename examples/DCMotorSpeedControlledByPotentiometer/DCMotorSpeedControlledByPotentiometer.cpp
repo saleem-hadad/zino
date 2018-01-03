@@ -14,9 +14,8 @@ void setup()
 
 void loop()
 {
-    motor.setDutyCycle(
-        double(GPIO::read(potentiometer)) / 1024
-    );
+    double dutyCycle = double(GPIO::read(potentiometer)) / 1023; // 0.0 <-> 1.0
 
+    motor.setDutyCycle(dutyCycle);
     motor.refresh();
 }
