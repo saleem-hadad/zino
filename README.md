@@ -32,6 +32,6 @@ However, I did NOT test the library on the Arduino IDE, so please notify me if y
 - Future
   + Servo ✂️
   + Stepper 💿
-  + EEPROM 💾
+  + EEPROM(Internal & External) 💾
   + Serial ☎️
   + Ultrasonic 👁‍🗨👁‍🗨
