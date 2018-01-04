@@ -38,24 +38,7 @@ It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://
 
 > Classes
 
-- Released
-  + Button 🔲
-  + AnalogComparator 🎶
-  + Delay ⏱
-  + Blinky 🔮
-  + Pin 📍
-  + LED 💡
-- Development
-  + GPIO 🎹
-  + DCMotor 🏍
-  + AnalogController 🎛
-- Future
-  + Servo ✂️
-  + Stepper 💿
-  + EEPROM(Internal & External) 💾
-  + Serial ☎️
-  + Ultrasonic 👁‍🗨👁‍🗨
-
+![zino](https://github.com/saleem-hadad/zino/blob/master/assets/button.png)
 
 ## Running the examples
 
