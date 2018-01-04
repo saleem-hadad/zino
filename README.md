@@ -1,4 +1,4 @@
-![zino](https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/logo.svg?sanitize=true)
+![zino](https://github.com/saleem-hadad/zino/blob/master/assets/logo.svg)
 
 # 𝓩ino ♥️
 
