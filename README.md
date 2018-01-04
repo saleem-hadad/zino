@@ -38,7 +38,9 @@ It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://
 
 > Classes
 
-![zino](https://github.com/saleem-hadad/zino/blob/master/assets/button.png)
+<p align="center">
+  <img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
+</p>
 
 ## Running the examples
 
