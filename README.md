@@ -38,9 +38,8 @@ It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://
 
 > Classes
 
-<p align="center">
-  <img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
-</p>
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
 
 ## Running the examples
 
