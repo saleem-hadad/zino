@@ -8,7 +8,7 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 ### Prerequisites
 
-It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://atom.io/) or [VSCode](https://atom.io/) text-editor with [Platform IO](http://platformio.org/platformio-ide) for a better development environment.
+It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/) text-editor with [Platform IO](http://platformio.org/platformio-ide) for a better development environment.
 
 ### Installing
 
