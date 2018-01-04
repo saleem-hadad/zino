@@ -6,6 +6,19 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 ## Getting Started
 
+> Classes
+
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/Blinky.png" alt="Zino Blinky class"/>
+
+## Development
+
+### Supported Boards
+
++ UNO
+
 ### Prerequisites
 
 It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/) text-editor with [Platform IO](http://platformio.org/platformio-ide) for a better development environment.
@@ -29,19 +42,6 @@ It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://
 
 *I did NOT test the library on the Arduino IDE, so please notify me if you get any warning/error!
 
-
-## Development
-
-> Supported Boards
-
-+ UNO
-
-> Classes
-
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/Blinky.png" alt="Zino Blinky class"/>
 
 ## Running the examples
 
