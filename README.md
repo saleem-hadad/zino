@@ -67,4 +67,4 @@ Navigate to the examples folder, copy the code of your fav. one and paste it in 
 
 ## License
 
-This library is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This library is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
