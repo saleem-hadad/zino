@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="300px" viewBox="0 0 1000 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="HomePage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-4">
+            <text id="𝔃ino" font-family="CambriaMath, Cambria Math" font-size="94" font-weight="normal" letter-spacing="0.193917304">
+                <tspan x="412.028669" y="264" fill="#F7648B">𝔃</tspan>
+                <tspan x="468.631766" y="264" font-family="Consolas" font-size="72" fill="#4A4A4A">ino</tspan>
+            </text>
+            <g id="icons8-3d_object_" transform="translate(415.000000, 15.000000)" fill-rule="nonzero" fill="#F7648B">
+                <path d="M85,67.1052632 C94.8689474,67.1052632 102.894737,75.1310526 102.894737,85 C102.894737,94.8689474 94.8689474,102.894737 85,102.894737 C75.1310526,102.894737 67.1052632,94.8689474 67.1052632,85 C67.1052632,75.1310526 75.1310526,67.1052632 85,67.1052632 L85,67.1052632 Z M85,53.6842105 C67.7047368,53.6842105 53.6842105,67.7047368 53.6842105,85 C53.6842105,102.295263 67.7047368,116.315789 85,116.315789 C102.295263,116.315789 116.315789,102.295263 116.315789,85 C116.315789,67.7047368 102.295263,53.6842105 85,53.6842105 L85,53.6842105 Z" id="Shape"></path>
+                <path d="M85,35.7894737 C112.132895,35.7894737 134.210526,57.8671053 134.210526,85 C134.210526,112.132895 112.132895,134.210526 85,134.210526 C57.8671053,134.210526 35.7894737,112.132895 35.7894737,85 C35.7894737,57.8671053 57.8671053,35.7894737 85,35.7894737 L85,35.7894737 Z M85,26.8421053 C52.8789474,26.8421053 26.8421053,52.8789474 26.8421053,85 C26.8421053,117.121053 52.8789474,143.157895 85,143.157895 C117.121053,143.157895 143.157895,117.121053 143.157895,85 C143.157895,52.8789474 117.121053,26.8421053 85,26.8421053 L85,26.8421053 Z" id="Shape" fill-opacity="0.616904438"></path>
+                <g id="Group">
+                    <circle id="Oval" cx="85" cy="4.47368421" r="4.47368421"></circle>
+                    <circle id="Oval" cx="85" cy="165.526316" r="4.47368421"></circle>
+                    <circle id="Oval" cx="85" cy="4.47368421" r="4.47368421"></circle>
+                    <circle id="Oval" cx="85" cy="165.526316" r="4.47368421"></circle>
+                    <circle id="Oval" cx="165.526316" cy="85" r="4.47368421"></circle>
+                    <circle id="Oval" cx="4.47368421" cy="85" r="4.47368421"></circle>
+                    <circle id="Oval" transform="translate(141.939711, 28.059674) rotate(-45.000000) translate(-141.939711, -28.059674) " cx="141.939711" cy="28.0596739" r="4.47364131"></circle>
+                    <circle id="Oval" transform="translate(28.058053, 141.940326) rotate(-45.000000) translate(-28.058053, -141.940326) " cx="28.0580526" cy="141.940326" r="4.47364131"></circle>
+                    <circle id="Oval" transform="translate(141.939711, 28.059674) rotate(-45.000000) translate(-141.939711, -28.059674) " cx="141.939711" cy="28.0596739" r="4.47364131"></circle>
+                    <circle id="Oval" transform="translate(28.058053, 141.940326) rotate(-45.000000) translate(-28.058053, -141.940326) " cx="28.0580526" cy="141.940326" r="4.47364131"></circle>
+                    <circle id="Oval" transform="translate(141.939431, 141.940605) rotate(-45.000000) translate(-141.939431, -141.940605) " cx="141.939431" cy="141.940605" r="4.47364131"></circle>
+                    <circle id="Oval" transform="translate(28.058332, 28.059395) rotate(-45.000000) translate(-28.058332, -28.059395) " cx="28.0583318" cy="28.0593947" r="4.47364131"></circle>
+                    <circle id="Oval" transform="translate(115.817334, 10.602076) rotate(-67.499572) translate(-115.817334, -10.602076) " cx="115.817334" cy="10.6020759" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(54.189376, 159.397029) rotate(-67.499572) translate(-54.189376, -159.397029) " cx="54.1893763" cy="159.397029" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(115.817334, 10.602076) rotate(-67.499572) translate(-115.817334, -10.602076) " cx="115.817334" cy="10.6020759" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(54.189376, 159.397029) rotate(-67.499572) translate(-54.189376, -159.397029) " cx="54.1893763" cy="159.397029" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(159.401056, 115.813308) rotate(-67.499572) translate(-159.401056, -115.813308) " cx="159.401056" cy="115.813308" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(10.605655, 54.185797) rotate(-67.499572) translate(-10.605655, -54.185797) " cx="10.6056549" cy="54.1857973" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(159.402376, 54.183365) rotate(-22.500428) translate(-159.402376, -54.183365) " cx="159.402376" cy="54.1833654" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(10.604334, 115.817529) rotate(-22.500428) translate(-10.604334, -115.817529) " cx="10.6043343" cy="115.817529" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(159.402376, 54.183365) rotate(-22.500428) translate(-159.402376, -54.183365) " cx="159.402376" cy="54.1833654" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(10.604334, 115.817529) rotate(-22.500428) translate(-10.604334, -115.817529) " cx="10.6043343" cy="115.817529" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(115.820214, 159.399245) rotate(-22.500428) translate(-115.820214, -159.399245) " cx="115.820214" cy="159.399245" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(54.186497, 10.601650) rotate(-22.500428) translate(-54.186497, -10.601650) " cx="54.186497" cy="10.6016501" r="4.47379717"></circle>
+                    <circle id="Oval" transform="translate(69.289920, 6.021346) rotate(-11.250379) translate(-69.289920, -6.021346) " cx="69.2899197" cy="6.02134632" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(100.714554, 163.979548) rotate(-11.250379) translate(-100.714554, -163.979548) " cx="100.714554" cy="163.979548" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(69.289920, 6.021346) rotate(-11.250379) translate(-69.289920, -6.021346) " cx="69.2899197" cy="6.02134632" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(100.714554, 163.979548) rotate(-11.250379) translate(-100.714554, -163.979548) " cx="100.714554" cy="163.979548" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(163.981338, 69.288130) rotate(-11.250379) translate(-163.981338, -69.288130) " cx="163.981338" cy="69.2881303" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(6.023136, 100.712764) rotate(-11.250379) translate(-6.023136, -100.712764) " cx="6.02313579" cy="100.712764" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(129.743870, 18.043668) rotate(-56.249549) translate(-129.743870, -18.043668) " cx="129.74387" cy="18.0436676" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(40.266867, 151.956332) rotate(-56.249549) translate(-40.266867, -151.956332) " cx="40.2668666" cy="151.956332" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(129.743870, 18.043668) rotate(-56.249549) translate(-129.743870, -18.043668) " cx="129.74387" cy="18.0436676" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(40.266867, 151.956332) rotate(-56.249549) translate(-40.266867, -151.956332) " cx="40.2668666" cy="151.956332" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(151.961701, 129.738502) rotate(-56.249549) translate(-151.961701, -129.738502) " cx="151.961701" cy="129.738502" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(18.049036, 40.261498) rotate(-56.249549) translate(-18.049036, -40.261498) " cx="18.049036" cy="40.2614982" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(100.711794, 6.018157) rotate(-78.749621) translate(-100.711794, -6.018157) " cx="100.711794" cy="6.01815658" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(69.292233, 163.980949) rotate(-78.749621) translate(-69.292233, -163.980949) " cx="69.2922326" cy="163.980949" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(100.711794, 6.018157) rotate(-78.749621) translate(-100.711794, -6.018157) " cx="100.711794" cy="6.01815658" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(69.292233, 163.980949) rotate(-78.749621) translate(-69.292233, -163.980949) " cx="69.2922326" cy="163.980949" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(163.983633, 100.709557) rotate(-78.749621) translate(-163.983633, -100.709557) " cx="163.983633" cy="100.709557" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(6.020841, 69.289548) rotate(-78.749621) translate(-6.020841, -69.289548) " cx="6.02084079" cy="69.2895484" r="4.47375724"></circle>
+                    <circle id="Oval" transform="translate(151.960446, 40.260878) rotate(-33.750451) translate(-151.960446, -40.260878) " cx="151.960446" cy="40.2608781" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(18.050739, 129.739122) rotate(-33.750451) translate(-18.050739, -129.739122) " cx="18.0507387" cy="129.739122" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(151.960446, 40.260878) rotate(-33.750451) translate(-151.960446, -40.260878) " cx="151.960446" cy="40.2608781" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(18.050739, 129.739122) rotate(-33.750451) translate(-18.050739, -129.739122) " cx="18.0507387" cy="129.739122" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(129.744490, 151.955077) rotate(-33.750451) translate(-129.744490, -151.955077) " cx="129.74449" cy="151.955077" r="4.47387123"></circle>
+                    <circle id="Oval" transform="translate(40.266247, 18.045370) rotate(-33.750451) translate(-40.266247, -18.045370) " cx="40.2662465" cy="18.0453703" r="4.47387123"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
