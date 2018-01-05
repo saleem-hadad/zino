@@ -17,6 +17,10 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 ## Development
 
+### Future implementation and classes
+
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/future.png" alt="Zino Future process"/>
+
 ### Supported Boards
 
 + UNO
