@@ -167,6 +167,30 @@ void loop()
 ```
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/DCMotor.png" alt="Zino DCMotor class"/>
+
+(*This class still in development*)
+
+Controlling DC Motors needs a lot of hardware and software configurations to be handled. However, ```DCMotor``` class provides a convenient way of controlling the DC motors by generating a software PWM signal on any digital pin and not only the timers one (with [~] label), which means you can connect the dc motor to any digital pin 😎
+
+```c
+#include <Arduino.h>
+#include <DCMotor.h>
+#include <Pin.h>
+
+DCMotor motor;
+
+void setup()
+{
+    motor.init(Pin(PortB, 4), 200); // provide the pin and frequency(in hz) needed
+    motor.setDutyCycle(0.5);        // control the speed by adjusting the dutyCycle between 0.0 and 1.0
+}
+
+void loop()
+{
+    motor.refresh();
+}
+```
+
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
 
