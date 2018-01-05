@@ -113,6 +113,31 @@ void loop()
 more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/LED.png" alt="Zino LED class"/>
+
+LEDs are the fun things to play with 🤓, for that, the ```LED``` class handles some cool features that you might need to control the LEDs very easily.
+
+```c
+#include <Arduino.h>
+#include <Pin.h>
+#include <LED.h>
+
+Pin ledPin(PortB, 4); // same as digital pin 12
+LED led;
+
+void setup()
+{
+    led.init(ledPin);
+}
+
+void loop()
+{
+    led.on();
+    led.off();
+    // or
+    led.toggle();
+}
+```
+
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/DCMotor.png" alt="Zino DCMotor class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
