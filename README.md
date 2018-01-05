@@ -39,7 +39,7 @@ It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://
 lib_deps = https://github.com/saleem-hadad/zino/archive/master.zip
 ```
 
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/installing.git" alt="Zino installing process"/>
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/installing.gif" alt="Zino installing process"/>
 
 2: Create a new project then [Download the library](https://github.com/saleem-hadad/zino/archive/master.zip) and extract the files into the ```lib``` folder.
 
