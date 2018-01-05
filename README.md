@@ -137,6 +137,9 @@ void loop()
     led.toggle();
 }
 ```
+
+more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
+
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Blinky.png" alt="Zino Blinky class"/>
 
 The ```Blinky``` class provides an easy way for blinking(flashing) LEDs, generating a square wave or controlling DC motors.. etc.
@@ -166,6 +169,8 @@ void loop()
 }
 ```
 
+more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
+
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/DCMotor.png" alt="Zino DCMotor class"/>
 
 (*This class still in development*)
@@ -190,6 +195,8 @@ void loop()
     motor.refresh();
 }
 ```
+
+more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
