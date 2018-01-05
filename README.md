@@ -198,8 +198,39 @@ void loop()
 
 more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
 
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
+
+Most probably you came across this issue when you deal with the delay function that Arduino library provides, which halts the CPU for specific period in ms. However, you might need to perform an action with delay without delaying the whole process. For example, you might need send a message to serial port every 1s without affecting other functionalities! for that, the Zino library provides an alternative way for using the delay concept, here is an example:
+
+```c
+#include <Arduino.h>
+#include <Delay.h>
+
+Delay myDelay;       // default duration 1000 ms.
+// Delay myDelay(1000); //Other initialization
+
+void callback()
+{
+    Serial.println("Hello world 🖐"); // print "Hello world 🖐" every 0.5 s
+}
+
+void setup()
+{
+    Serial.begin(9600);
+    myDelay.init(500); // duration = 500 ms. (0.5 s)
+
+    myDelay.callback = callback; // set the callback to be notified
+}
+
+void loop()
+{
+    myDelay.refresh();
+    //Other stuff goes here
+}
+```
+
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
+
 
 ## Development
 
