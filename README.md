@@ -137,11 +137,38 @@ void loop()
     led.toggle();
 }
 ```
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/Blinky.png" alt="Zino Blinky class"/>
+
+The ```Blinky``` class provides an easy way for blinking(flashing) LEDs, generating a square wave or controlling DC motors.. etc.
+
+Here is an example of how to use it in your applications:
+
+```c
+/*
+    Blinking an LED connected to PortB on pin 0 (same as digital pin 8)
+    for a period of 1000ms on and 100ms off, without using the delay
+    that Arduino library provides, or affecting other codes.
+*/
+#include <Arduino.h>
+#include <Blinky.h>
+#include <Pin.h>
+
+Blinky led;
+
+void setup()
+{
+    led.init(Pin(PortB, 0), 1000, 100); // (pin, onTime, offTime)
+}
+
+void loop()
+{
+    led.refresh();
+}
+```
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/DCMotor.png" alt="Zino DCMotor class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/AnalogComparator.png" alt="Zino AnalogComparator class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/Blinky.png" alt="Zino Blinky class"/>
 
 ## Development
 
