@@ -24,7 +24,7 @@ Pin temperatureSensorPin(PortC, 4); // portName: PortC, pinNumber: 4 // same as 
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/GPIO.png" alt="Zino GPIO class"/>
 
-The library has its own ```GPIO``` wrapper(class) to use which its much more faster than the Arduino library. [See the comparison](https://github.com/saleem-hadad/zino/blob/master/examples/CompareFrequencies/CompareFrequencies.cpp).
+The library has its own ```GPIO``` wrapper(class) to use, which is much more faster than the Arduino library. [See the comparison](https://github.com/saleem-hadad/zino/blob/master/examples/CompareFrequencies/CompareFrequencies.cpp).
 
 Working with I/O using ```GPIO``` class is pretty straightforward! Here some examples:
 
