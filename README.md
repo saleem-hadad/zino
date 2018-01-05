@@ -10,7 +10,7 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 The library introduces this new concept of shaping the pin as an object which has a port address and pin number.
 
-The **Pin** class used in many different other classes to handle the process of assigning the pin either ```Output```, ```Input``` or ```InputWithPullUp``` resister. 
+The **Pin** class used in many different other classes to handle the process of assigning the pin either ```Output```, ```Input``` or ```InputWithPullUp``` resister.
 
 The reason for using Pin class instead of the pin number as Arduino library uses is first for educational purpose where the students can get a clue of the register concept and also to make the code very clean and organised.
 
@@ -23,6 +23,54 @@ Pin temperatureSensorPin(PortC, 4); // portName: PortC, pinNumber: 4 // same as 
 ```
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/GPIO.png" alt="Zino GPIO class"/>
+
+Working with I/O using ```GPIO``` class is pretty straightforward! Here some examples:
+
+```c
+// Blinking LED on and off without delay.
+#include <GPIO.h>
+#include <Pin.h>
+
+Pin redLedPin(PortB, 0);
+
+void setup()
+{
+    GPIO::setup(redLedPin, Output); // You can choose ```Output```, ```Input``` or ```InputWithPullUp```.
+}
+
+void loop()
+{
+    GPIO::high(redLedPin);      // Turn on the LED
+    GPIO::low(redLedPin);       // Turn off the LED
+
+    //or
+    GPIO::write(redLedPin, 1);  // Turn on the LED
+    GPIO::write(redLedPin, 0);  // Turn off the LED
+}
+```
+
+```c
+// Reading analog input from PortC, pin number 4 and print the result to the serial.
+#include <Arduino.h>
+#include <GPIO.h>
+#include <Pin.h>
+
+Pin temperatureSensorPin(PortC, 4);
+
+void setup()
+{
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    int temperature = GPIO::read(temperatureSensorPin);
+    Serial.println(temperature);
+}
+```
+
+more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
+
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/LED.png" alt="Zino LED class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/DCMotor.png" alt="Zino DCMotor class"/>
