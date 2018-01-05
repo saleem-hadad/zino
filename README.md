@@ -200,7 +200,7 @@ more examples you can find [here](https://github.com/saleem-hadad/zino/tree/mast
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Delay.png" alt="Zino Delay class"/>
 
-Most probably you came across this issue when you deal with the delay function that Arduino library provides, which halts the CPU for specific period in ms. However, you might need to perform an action with delay without delaying the whole process. For example, you might need send a message to serial port every 1s without affecting other functionalities! for that, the Zino library provides an alternative way for using the delay concept, here is an example:
+Most probably you came across this issue when you deal with the delay function that Arduino library provides, which halts the CPU for specific period in ms. However, you might need to perform an action with delay without delaying the whole process. For example, you might need to send a message to the serial port every 1s without affecting other functionalities! for that, the Zino library provides an alternative way for using the delay function, here is an example:
 
 ```c
 #include <Arduino.h>
