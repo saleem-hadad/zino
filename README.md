@@ -175,7 +175,7 @@ more examples you can find [here](https://github.com/saleem-hadad/zino/tree/mast
 
 (*This class still in development*)
 
-Controlling DC Motors needs a lot of hardware and software configurations to be handled. However, ```DCMotor``` class provides a convenient way of controlling the DC motors by generating a software PWM signal on any digital pin and not only the timers one (with [~] label), which means you can connect the dc motor to any digital pin 😎
+Controlling DC Motors needs a lot of hardware and software configurations to be handled. However, ```DCMotor``` class provides a convenient way of controlling the DC motors by generating a software PWM signal on any digital pin and not only the timers ones (with [~] label), which means you can control the dc motor by any digital pin 😎
 
 ```c
 #include <Arduino.h>
