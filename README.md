@@ -33,13 +33,15 @@ It's highly recommended to avoid using Arduino IDE, instead, use [Atom](https://
 
 > If you are using Atom/VSCode with Platform IO you have **two ways**
 
-1. Create a new project, then add this line to ```platformio.ini``` file
+1: Create a new project, then add this line to ```platformio.ini``` file
 
-	```
-	lib_deps = https://github.com/saleem-hadad/zino/archive/master.zip
-	```
+```
+lib_deps = https://github.com/saleem-hadad/zino/archive/master.zip
+```
 
-2. Create a new project then [Download the library](https://github.com/saleem-hadad/zino/archive/master.zip) and extract the files into the ```lib``` folder.
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/installing.git" alt="Zino installing process"/>
+
+2: Create a new project then [Download the library](https://github.com/saleem-hadad/zino/archive/master.zip) and extract the files into the ```lib``` folder.
 
 > If you are using Arduino IDE*
 
