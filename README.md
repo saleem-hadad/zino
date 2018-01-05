@@ -7,7 +7,9 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 ## Getting Started
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Pin.png" alt="Zino Pin class"/>
-The library introduces this new concept of shaping the pin as an object which has a port address and pin number. The **Pin** class used in many different other classes to handle the process of assigning the pin either Output, Input or InputWithPullUp resister. The reason for using Pin class instead of the pin number as Arduino library uses is first for educational purpose where student can get a clue of register's concept and also to make the code very clean and organised.
+
+The library introduces this new concept of shaping the pin as an object which has a port address and pin number.
+The **Pin** class used in many different other classes to handle the process of assigning the pin either Output, Input or InputWithPullUp resister. The reason for using Pin class instead of the pin number as Arduino library uses is first for educational purpose where student can get a clue of register's concept and also to make the code very clean and organised.
 
 ```c
 #include <Pin.h>
