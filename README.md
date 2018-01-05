@@ -6,8 +6,18 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 ## Getting Started
 
-<img src="https://github.com/saleem-hadad/zino/blob/master/assets/GPIO.png" alt="Zino GPIO class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Pin.png" alt="Zino Pin class"/>
+The library introduces this new concept of shaping the pin as an object which has a port address and pin number. The ```Pin``` class used in many different other classes to handle the process of assigning the pin either Output, Input or InputWithPullUp resister. The reason for using Pin class instead of the pin number as Arduino library uses is first for educational purpose where student can get a clue of register's concept and also to make the code very clean and organised.
+
+```c
+#include <Pin.h>
+
+Pin redLedPin(PortB, 0);            // portName: PortB, pinNumber: 0 // same as digital pin 8
+Pin greenLedPin(PortD, 1);          // portName: PortD, pinNumber: 1 // same as digital pin 1
+Pin temperatureSensorPin(PortC, 4); // portName: PortC, pinNumber: 4 // same as analog pin A4
+```
+
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/GPIO.png" alt="Zino GPIO class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/button.png" alt="Zino Button class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/LED.png" alt="Zino LED class"/>
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/DCMotor.png" alt="Zino DCMotor class"/>
