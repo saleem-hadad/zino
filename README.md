@@ -147,7 +147,7 @@ Here is an example of how to use it in your applications:
 /*
     Blinking an LED connected to PortB on pin 0 (same as digital pin 8)
     for a period of 1000ms on and 100ms off, without using the delay
-    that Arduino library provides, or affecting other codes.
+    Arduino library's function, and without affecting other codes
 */
 #include <Arduino.h>
 #include <Blinky.h>
