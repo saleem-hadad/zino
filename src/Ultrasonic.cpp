@@ -25,11 +25,6 @@ Ultrasonic::Ultrasonic()
     //
 }
 
-Ultrasonic::Ultrasonic(Pin trig, Pin echo)
-{
-    this->init(trig, echo);
-}
-
 void Ultrasonic::init(Pin trig, Pin echo)
 {
     this->_trig = &trig;

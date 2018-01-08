@@ -40,16 +40,6 @@ public:
 	Ultrasonic();
 
 	/*
-	Ultrasonic constructor:
-	@params:
-    Pin trig
-    Pin echo
-	@return:
-	void
-	*/
-	Ultrasonic(Pin trig, Pin echo);
-
-	/*
 	init method:
 	@params:
 	Pin trig
