@@ -54,9 +54,12 @@ float Ultrasonic::sense() {
     delayMicroseconds(7);
     GPIO::write(*this->_trig, 0);
 
-    float time = pulseIn( this->_echo->port() == PortB ? this->_echo->pin() + 8 : this->_echo->pin(), HIGH);
+    char pin = this->_echo->port() == PortB ? this->_echo->pin() + 8 : this->_echo->pin();
+    float time = pulseIn(pin , HIGH);
     time /= 58;
-    if (this->measurementUnit == mm) time *= 10;
-    if (this->measurementUnit == m) time /= 10;
-    return time * 10;
+
+         if (this->measurementUnit == MeasurementUnit::MM) time *= 10;
+    else if (this->measurementUnit == MeasurementUnit::M) time /= 100;
+
+    return time;
 }

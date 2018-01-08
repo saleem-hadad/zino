@@ -21,10 +21,10 @@
 
 #include "Pin.h"
 
-enum MeasurementUnit {
-    m,
-    cm,
-    mm
+enum class MeasurementUnit {
+    M,
+    CM,
+    MM
 };
 
 class Ultrasonic
@@ -94,7 +94,9 @@ private:
 	Pin* _trig;
     Pin* _echo;
 
-    MeasurementUnit measurementUnit = cm;
+    //
+    MeasurementUnit measurementUnit = MeasurementUnit::CM;
+
 	// Used to track if the ultrasonic object initialized or not.
 	bool _initialized = false;
 };
