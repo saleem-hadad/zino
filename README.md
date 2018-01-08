@@ -275,7 +275,7 @@ more examples you can find [here](https://github.com/saleem-hadad/zino/tree/mast
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/Ultrasonic.png" alt="Zino Ultrasonic class"/>
 
-➡ *Theoretical informations*
+👉 *Theoretical informations*
 
 Ultrasonic is an adjective referring to ultrasound.
 Ultrasound and ultrasonic may also refer to: Medical ultrasonography, an ultrasound-based diagnostic imaging technique. Ultrasound (band), a rock band.
@@ -286,7 +286,7 @@ Working principal:
 2. Echo get the reflection of the ultrasonic wave.
 3. As long as reflection signal is High it means there is an object.
 
-➡ *Technical informations*
+👉 *Technical informations*
 
 The Zino library encapsulates the essential methods needed to measure the distance from an ultrasonic sensor in the ```Ultrasonic``` class, all you have to do is to call the ```sense``` method which will return back the measured distance according to the subjected ```MeasurementUnit```, which is by default in cm.
 
