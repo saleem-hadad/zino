@@ -75,20 +75,18 @@ public:
 	@params:
 	void
 	@return:
-	flot
+	float
 	---
-	...
 	*/
     float sense();
 
     /*
 	setMeasurementUnit method:
 	@params:
-	void
-	@return:
-	flot
-	---
 	MeasurementUnit measurementUnit
+	@return:
+	void
+	---
 	*/
     void setMeasurementUnit(MeasurementUnit measurementUnit);
 private:
