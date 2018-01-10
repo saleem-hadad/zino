@@ -72,6 +72,19 @@ public:
     the pin will stay on for 0.5s and off for 0.5s
 	*/
     void setDutyCycle(double dutyCycle);
+
+	/*
+	setFrequency method:
+	@params:
+	long frequency
+	double dutyCycle
+	@return:
+	void
+	---
+	Used to update the PWM frequency. For example if
+    the frequency set to 100 -> the period will be
+	equal to f=1÷t => t=1÷f = 1 ÷ 100 = 0.01 s.
+	*/
 	void setFrequency(long frequency);
 private:
 	// The pin object used to be set as output.
