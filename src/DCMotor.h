@@ -88,6 +88,7 @@ public:
 	void setFrequency(long frequency);
 	void forward();
 	void backward();
+	void stop();
 private:
 	// The pin object used to be set as output.
 	Pin* _pin;

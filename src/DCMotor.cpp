@@ -64,3 +64,8 @@ void DCMotor::backward()
 {
     //
 }
+
+void DCMotor::stop()
+{
+    //
+}
