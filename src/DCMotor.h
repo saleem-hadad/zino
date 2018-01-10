@@ -86,6 +86,8 @@ public:
 	equal to f=1÷t => t=1÷f = 1 ÷ 100 = 0.01 s.
 	*/
 	void setFrequency(long frequency);
+	void forward();
+	void backward();
 private:
 	// The pin object used to be set as output.
 	Pin* _pin;

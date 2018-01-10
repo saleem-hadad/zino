@@ -54,3 +54,13 @@ void DCMotor::setDutyCycle(double dutyCycle)
     this->_blinker.setOnTime(this->_period * dutyCycle);
     this->_blinker.setOffTime(this->_period - (this->_period * dutyCycle));
 }
+
+void DCMotor::forward()
+{
+    //
+}
+
+void DCMotor::backward()
+{
+    //
+}
