@@ -12,7 +12,7 @@ The library introduces this new concept of shaping the pin as an object which ha
 
 The **Pin** class used in many different other classes to handle the process of assigning the pin either ```Output```, ```Input``` or ```InputWithPullUp``` resister.
 
-The reason for using Pin class instead of the pin number as Arduino library uses is first for educational purpose where the students can get a clue of the register concept and also to make the code very clean and organised. However, the library also supports the pin number method if still like it!
+The reason for using Pin class instead of the pin number as Arduino library uses is first for educational purpose where the students can get a clue of the register concept and also to make the code very clean and organised. However, the library also supports the pin number method if you still like it!
 
 ```c
 #include <Pin.h>
