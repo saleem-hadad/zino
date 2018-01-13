@@ -48,6 +48,15 @@ public:
     /*
     Pin constructor:
     @params:
+    char pin
+    @return:
+    void
+	*/
+    Pin(char pin);
+
+    /*
+    Pin constructor:
+    @params:
     Port port
     char pin
     @return:

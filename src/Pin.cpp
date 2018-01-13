@@ -18,6 +18,20 @@
 
 #include "Pin.h"
 
+Pin::Pin(char pin): _pin(pin)
+{
+    if(pin >= 0 && pin <= 7)
+    {
+        this->_pin  = (1 << pin);
+        this->_port = PortD;
+    }
+    else if(pin >= 8 && pin <= 13)
+    {
+        this->_pin  = (1 << (pin - 8));
+        this->_port = PortB;
+    }
+}
+
 Pin::Pin(Port port, char pin): _port(port), _pin(pin)
 {
     this->_port = port;
