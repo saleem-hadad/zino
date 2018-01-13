@@ -363,6 +363,9 @@ Navigate to the examples folder, copy the code of your fav. one and paste it in 
 
 * **Saleem Hadad** - *Binary Torch* - [saleem-hadad](https://github.com/saleem-hadad)
 
+See also the list of [contributors](https://github.com/saleem-hadad/zino/contributors) who participated in this project.
+
+
 ## License
 
 This library is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
