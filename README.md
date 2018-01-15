@@ -315,6 +315,42 @@ void loop()
 
 more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
 
+<img src="https://github.com/saleem-hadad/zino/blob/master/assets/PowerManager.png" alt="Zino PowerManager class"/>
+
+The ```PowerManager``` class used to reduce the power consumption by the Arduino chip, *please refer to the datasheet of the Atmega328p before you use this class*. There are two static methods available:
+
+1. ```sleep```:
+    + Turning off ADC
+    + Turning off Analog Comparator
+    + Sleep with power-down mode
+2. ```deepSleep```:
+    + BOD disabled
+    + BOD sleep enable
+    + Turning off ADC
+    + Turning off Analog Comparator
+    + Sleep with power-down mode
+
+An example sketch follows:
+
+```c
+#include <Arduino.h>
+#include <PowerManager.h>
+
+void setup()
+{
+    PowerManager::sleep();
+    // or
+    PowerManager::deepSleep();
+}
+
+void loop()
+{
+    //
+}
+```
+
+more examples you can find [here](https://github.com/saleem-hadad/zino/tree/master/examples)
+
 ## Development
 
 ### Future implementation and classes
