@@ -317,7 +317,7 @@ more examples you can find [here](https://github.com/saleem-hadad/zino/tree/mast
 
 <img src="https://github.com/saleem-hadad/zino/blob/master/assets/PowerManager.png" alt="Zino PowerManager class"/>
 
-The ```PowerManager``` class used to reduce the power consumption by the Arduino chip, *please refer to the datasheet of the Atmega328p before you use this class*. There are two static methods available:
+The ```PowerManager``` class used to reduce the power consumption by the Arduino chip, *[please refer to this article to understand the Arduino power management before you use this class](https://playground.arduino.cc/Learning/ArduinoSleepCode)*. There are two static methods available:
 
 1. ```sleep```:
     + Turning off ADC
