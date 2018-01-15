@@ -31,6 +31,9 @@ public:
     @return:
     void
     ---
+    1. Turning off ADC
+    2. Turning off Analog Comparator
+    3. Sleep with power-down mode
     */
     static void sleep();
 
@@ -41,6 +44,11 @@ public:
     @return:
     void
     ---
+    1. BOD disabled
+    2. BOD sleep enable
+    3. Turning off ADC
+    4. Turning off Analog Comparator
+    5. Sleep with power-down mode
     */
     static void deepSleep();
 };
