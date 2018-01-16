@@ -38,12 +38,11 @@ public:
 	init method:
 	@params:
 	Pin pin
-	int period
 	@return:
 	void
 	---
 	*/
-	void init(Pin pin, int period);
+	void init(Pin pin);
 
 	/*
 	write method:
@@ -84,7 +83,7 @@ private:
     Blinky _blinker;
 
     // Used to determin the on and off time of the blinker.
-    int _period = 0;
+    int _period = 30;
 
 	// Used to track if the ServoMotor object initialized or not.
 	bool _initialized = false;

@@ -21,10 +21,9 @@
 
 ServoMotor::ServoMotor(){}
 
-void ServoMotor::init(Pin pin, int period)
+void ServoMotor::init(Pin pin)
 {
     this->_pin = &pin;
-    this->_period = period;
     this->_blinker.init(pin, 0, this->_period);
 
     this->_initialized = true;
@@ -33,7 +32,7 @@ void ServoMotor::init(Pin pin, int period)
 void ServoMotor::write(int angle)
 {
     if(! this->_initialized) { return; }
-    
+
     long l = angle;
     l = map(l, 0, 180, this->_minPulseWidth, this->_maxPulseWidth);
     this->_blinker.setOnTime(l * 0.001);

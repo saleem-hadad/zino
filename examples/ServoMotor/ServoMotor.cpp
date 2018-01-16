@@ -5,8 +5,8 @@ ServoMotor motor;
 
 void setup()
 {
-    motor.init(Pin(PortB, 0), 20);
-    motor.write(10);
+    motor.init(Pin(PortB, 0));
+    motor.write(0); // 0º - 180º
 }
 
 void loop()
