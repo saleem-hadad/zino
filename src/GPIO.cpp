@@ -76,7 +76,7 @@ int GPIO::read(Pin& pin)
 {
     if (pin.port() == PortB) {
         return (*pinb & (1 << pin.pin())) ? 1 : 0;
-    }else if(pin.port() == PortB){
+    }else if(pin.port() == PortD){
         return (*pind & (1 << pin.pin())) ? 1 : 0;
     }
 
