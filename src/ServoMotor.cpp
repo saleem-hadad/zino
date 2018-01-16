@@ -12,58 +12,43 @@
  '----------------'  '----------------'  '----------------'  '----------------'
 
  Created by: Saleem Hadad
- Date: 30/12/2017
+ Date: 16/1/2018
  Github: https://github.com/saleem-hadad/zino
 */
 
-#include "Blinky.h"
+#include "ServoMotor.h"
 #include <Arduino.h>
-#include "GPIO.h"
 
-Blinky::Blinky(){}
+ServoMotor::ServoMotor(){}
 
-void Blinky::init(Pin pin, unsigned long onTime, unsigned long offTime)
+void ServoMotor::init(Pin pin, int period)
 {
     this->_pin = &pin;
-    this->_onTime  = onTime;
-    this->_offTime = offTime;
-    this->_initialized = true;
+    this->_period = period;
+    this->_blinker.init(pin, 0, this->_period);
 
-    GPIO::setup(pin, Output);
+    this->_initialized = true;
 }
 
-void Blinky::refresh(void)
+void ServoMotor::write(int angle)
+{
+    if(! this->_initialized) { return; }
+    
+    long l = angle;
+    l = map(l, 0, 180, this->_minPulseWidth, this->_maxPulseWidth);
+    this->_blinker.setOnTime(l * 0.001);
+    this->_blinker.setOffTime(this->_period - 0.001);
+}
+
+void ServoMotor::setPulseWidthRange(int min, int max)
+{
+    this->_minPulseWidth = min;
+    this->_maxPulseWidth = max;
+}
+
+void ServoMotor::refresh(void)
 {
     if(! this->_initialized) { return; }
 
-    unsigned long currentTime = millis();
-
-    if(! this->_active)
-    {
-        if ((currentTime - this->_previousTime) >= this->_offTime)
-        {
-            this->_active = true;
-            this->_previousTime = currentTime;
-            GPIO::write(*this->_pin, 1);
-        }
-    }
-    else
-    {
-        if((currentTime - this->_previousTime) >= this->_onTime)
-        {
-            this->_active = false;
-            this->_previousTime = currentTime;
-            GPIO::write(*this->_pin, 0);
-        }
-    }
-}
-
-void Blinky::setOnTime(unsigned long onTime)
-{
-    this->_onTime = onTime;
-}
-
-void Blinky::setOffTime(unsigned long offTime)
-{
-    this->_offTime = offTime;
+    this->_blinker.refresh();
 }
