@@ -22,13 +22,13 @@ Pin::Pin(char pin): _pin(pin)
 {
     if(pin >= 0 && pin <= 7)
     {
-        this->_pin  = (1 << pin);
-        this->_port = PortD;
+        this->_pin  = pin;
+        this->_port = Port::PortD;
     }
     else if(pin >= 8 && pin <= 13)
     {
-        this->_pin  = (1 << (pin - 8));
-        this->_port = PortB;
+        this->_pin  = pin - 8;
+        this->_port = Port::PortB;
     }
 }
 
