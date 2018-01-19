@@ -41,6 +41,7 @@ public:
 	@return:
 	void
 	---
+	Used to provide the pin connected with the servo.
 	*/
 	void init(Pin pin);
 
@@ -51,6 +52,7 @@ public:
 	@return:
 	void
 	---
+	Set the needed angle from 0º - 180º;
 	*/
 	void write(int angle);
 
@@ -62,6 +64,9 @@ public:
     @return:
     void
     ---
+	Used to update the default min/max pulse width
+	which normally they are different from servo
+	to another. Pls. refere to the datasheet.
     */
     void setPulseWidthRange(int min, int max);
 
