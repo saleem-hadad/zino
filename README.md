@@ -397,7 +397,7 @@ Navigate to the examples folder, copy the code of your fav. one and paste it in 
 
 ## Author(s)
 
-* **Saleem Hadad** - *Binary Torch* - [saleem-hadad](https://github.com/saleem-hadad)
+* [saleem-hadad](https://github.com/saleem-hadad) - *Binary Torch*
 
 See also the list of [contributors](https://github.com/saleem-hadad/zino/contributors) who participated in this project.
 
