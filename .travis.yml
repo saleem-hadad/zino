@@ -5,12 +5,13 @@ cache:
   - "~/.platformio"
 
 install:
-  - pip install -U platformio
-
+- pip install -U platformio
 
 env:
-  - PLATFORMIO_CI_SRC=examples/Button/Button.cpp
+- BOARD=uno
 
 script:
-  - platformio ci --board=uno --lib="."
-
+- set -eo pipefail;
+  for e in examples/*; do
+    platformio ci --board=$BOARD --lib=. $e/*;
+  done
