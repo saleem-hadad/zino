@@ -1,4 +1,6 @@
-<img style="float: right;" src="https://github.com/saleem-hadad/zino/blob/master/assets/logo.png" />
+<h1 align="center">
+    <img src="https://github.com/saleem-hadad/zino/blob/master/assets/logo.png"/>
+</h1>
 
 # 𝓩ino ♥️ [![Build Status](https://travis-ci.org/saleem-hadad/zino.svg?branch=master)](https://travis-ci.org/saleem-hadad/zino)
 
