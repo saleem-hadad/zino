@@ -2,7 +2,13 @@
     <img src="https://github.com/saleem-hadad/zino/blob/master/assets/logo.png"/>
 </h6>
 
-# 𝓩ino ♥️ [![Build Status](https://travis-ci.org/saleem-hadad/zino.svg?branch=master)](https://travis-ci.org/saleem-hadad/zino)
+<p align="center">
+<a href="https://travis-ci.org/saleem-hadad/zino"><img src="https://travis-ci.org/saleem-hadad/zino.svg" alt="Build Status"></a>
+<a href="https://github.com/saleem-hadad/zino"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
+
+
+# 𝓩ino ♥️
 
 Custom C++ based Arduino library provides a convenient and fast way for developing embedded systems projects.
 
