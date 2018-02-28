@@ -5,13 +5,12 @@ cache:
   - "~/.platformio"
 
 install:
-- pip install -U platformio
+  - pip install -U platformio
+
 
 env:
-- BOARD=uno
+  - PLATFORMIO_CI_SRC=examples/Button/Button
 
 script:
-- set -eo pipefail;
-  for e in examples/*; do
-    platformio ci --board=$BOARD --lib=. $e/*;
-  done
+  - platformio ci --board=uno --board=teensy31 --board=due --lib="."
+
