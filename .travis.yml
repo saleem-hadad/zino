@@ -9,8 +9,8 @@ install:
 
 
 env:
-  - PLATFORMIO_CI_SRC=examples/Button/Button
+  - PLATFORMIO_CI_SRC=examples/Button/Button.cpp
 
 script:
-  - platformio ci --board=uno --board=teensy31 --board=due --lib="."
+  - platformio ci --board=uno --lib="."
 
