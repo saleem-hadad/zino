@@ -20,25 +20,20 @@
 #define ZINO_ULTRASONIC_H
 
 #include "Pin.h"
+#include "GPIO.h"
+#include "Sensor.h"
+#include <Arduino.h>
 
-enum class MeasurementUnit {
+enum class MeasurementUnit
+{
     M,
     CM,
     MM
 };
 
-class Ultrasonic
+class Ultrasonic: Sensor
 {
 public:
-    /*
-	Ultrasonic constructor:
-	@params:
-    void
-	@return:
-	void
-	*/
-	Ultrasonic();
-
 	/*
 	init method:
 	@params:
@@ -47,18 +42,15 @@ public:
 	@return:
 	void
 	*/
-	void init(Pin trig, Pin echo);
+	void init(Pin trig, Pin echo)
+    {
+        this->_trig = &trig;
+        this->_echo = &echo;
+        this->_initialized = true;
 
-	/*
-	refresh method:
-	@params:
-	void
-	@return:
-	void
-	---
-	Should be placed in the main loop of the program.
-	*/
-	void refresh();
+        GPIO::setup(trig, Output);
+        GPIO::setup(echo, Input);
+    }
 
     /*
 	sense method:
@@ -68,7 +60,25 @@ public:
 	float
 	---
 	*/
-    float sense();
+    int sense()
+    {
+        if(! this->_initialized) { return 0.0; }
+
+        GPIO::write(*this->_trig, 0);
+        delayMicroseconds(2);
+        GPIO::write(*this->_trig, 1);
+        delayMicroseconds(7);
+        GPIO::write(*this->_trig, 0);
+
+        char pin = this->_echo->port() == PortB ? this->_echo->pin() + 8 : this->_echo->pin();
+        float time = pulseIn(pin , HIGH);
+        time /= 58;
+
+             if (this->measurementUnit == MeasurementUnit::MM) time *= 10;
+        else if (this->measurementUnit == MeasurementUnit::M) time /= 100;
+
+        return time;
+    }
 
     /*
 	setMeasurementUnit method:
@@ -78,7 +88,10 @@ public:
 	void
 	---
 	*/
-    void setMeasurementUnit(MeasurementUnit measurementUnit);
+    void setMeasurementUnit(MeasurementUnit measurementUnit)
+    {
+        this->measurementUnit = measurementUnit;
+    }
 private:
 	// The pins objects used to be set as input/output.
 	Pin* _trig;
