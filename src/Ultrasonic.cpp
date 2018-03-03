@@ -12,25 +12,47 @@
  '----------------'  '----------------'  '----------------'  '----------------'
 
  Created by: Saleem Hadad
- Date: 4/2/2018
+ Date: 8/1/2018
  Github: https://github.com/saleem-hadad/zino
 */
 
-#ifndef ZINO_SENSOR_H
-#define ZINO_SENSOR_H
 
-class Sensor
+#include "GPIO.h"
+#include "Ultrasonic.h"
+#include <Arduino.h>
+
+
+void Ultrasonic::init(Pin trig, Pin echo)
 {
-public:
-    /*
-	sense method:
-	@params:
-	void
-	@return:
-	int
-	---
-	*/
-    virtual int sense() = 0;
-};
+    this->_trig = &trig;
+    this->_echo = &echo;
+    this->_initialized = true;
 
-#endif
+    GPIO::setup(trig, Output);
+    GPIO::setup(echo, Input);
+}
+
+int Ultrasonic::sense()
+{
+    if(! this->_initialized) { return 0.0; }
+
+    GPIO::write(*this->_trig, 0);
+    delayMicroseconds(2);
+    GPIO::write(*this->_trig, 1);
+    delayMicroseconds(7);
+    GPIO::write(*this->_trig, 0);
+
+    char pin = this->_echo->port() == PortB ? this->_echo->pin() + 8 : this->_echo->pin();
+    float time = pulseIn(pin , HIGH);
+    time /= 58;
+
+         if (this->measurementUnit == MeasurementUnit::MM) time *= 10;
+    else if (this->measurementUnit == MeasurementUnit::M) time /= 100;
+
+    return time;
+}
+
+void Ultrasonic::setMeasurementUnit(MeasurementUnit measurementUnit)
+{
+    this->measurementUnit = measurementUnit;
+}
