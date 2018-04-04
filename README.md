@@ -17,11 +17,6 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 ## Getting Started
 
 
-
-## Running the examples
-
-Navigate to the examples folder, copy the code of your fav. one and paste it in ```scr/main.cpp```, then upload it, that's it 🤓
-
 ## Author(s)
 
 * [saleem-hadad](https://github.com/saleem-hadad) - *Binary Torch*
