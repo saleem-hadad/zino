@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "authors": {
   "name": "Saleem Hadad",
-  "url": "http://binary-torch.com"
+  "url": "https://zino.saleemhadad.me/"
   },
   "frameworks": "arduino",
   "platforms": ["atmelavr"]
