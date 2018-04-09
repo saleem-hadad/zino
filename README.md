@@ -6,7 +6,6 @@
 <a href="https://travis-ci.org/saleem-hadad/zino"><img src="https://travis-ci.org/saleem-hadad/zino.svg" alt="Build Status"></a>
 <a href="https://github.com/saleem-hadad/zino"><img src="https://img.shields.io/github/release/saleem-hadad/zino.svg" alt="License"></a>
 <a href="https://github.com/saleem-hadad/zino"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-
 </p>
 
 
@@ -20,12 +19,10 @@ Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library
 
 >   Avaliable Docs
 
-| ![En](https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png) | ![Ar](https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/arabic-docs.png) |
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
-|                                                              |                                                              |
-
-
-
+<p align="center">
+<a href="https://travis-ci.org/saleem-hadad/zino"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png" alt="English Docs"></a>
+<a href="https://github.com/saleem-hadad/zino"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/arabic-docs.png" alt="Arabic Docs"></a>
+</p>
 
 ## License
 
