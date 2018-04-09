@@ -16,12 +16,11 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 ## Getting Started
 
+Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library documentations.
 
-## Author(s)
+>   Avaliable Docs
 
-* [saleem-hadad](https://github.com/saleem-hadad) - *Binary Torch*
 
-See also the list of [contributors](https://github.com/saleem-hadad/zino/contributors) who participated in this project.
 
 
 ## License
