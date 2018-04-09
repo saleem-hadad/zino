@@ -20,6 +20,10 @@ Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library
 
 >   Avaliable Docs
 
+| ![En](https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png) | ![Ar](https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/arabic-docs.png) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+|                                                              |                                                              |
+
 
 
 
