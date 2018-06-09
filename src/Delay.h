@@ -108,7 +108,7 @@ private:
     bool _enabled = true;
 
     // The time interval used as a threshold to fire.
-    int _threshold = 1000;
+    unsigned long _threshold = 1000;
 
     // The time used to track the delay time interval.
     unsigned long _previous = 0;
