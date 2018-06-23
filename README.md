@@ -24,6 +24,14 @@ Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library
 <a href="https://zino.saleemhadad.me/docs/1.0/Ar"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/arabic-docs.png" alt="Arabic Docs"></a>
 </p>
 
+## ToDo
+
+- [] Add external EEPROM class
+- [] Add support for other boards
+- [] Improve library's structure
+- [] Add extra functionalities to GPIO class
+- [] Improve DC Motor calss
+
 ## License
 
 This library is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
