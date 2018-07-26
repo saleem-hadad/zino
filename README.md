@@ -26,11 +26,11 @@ Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library
 
 ## ToDo
 
-- [] Add external EEPROM class
-- [] Add support for other boards
-- [] Improve library's structure
-- [] Add extra functionalities to GPIO class
-- [] Improve DC Motor calss
+- [ ] Add external EEPROM class
+- [ ] Add support for other boards
+- [ ] Improve library's structure
+- [ ] Add extra functionalities to GPIO class
+- [ ] Improve DC Motor calss
 
 ## License
 
