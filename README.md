@@ -20,7 +20,7 @@ Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library
 > Documentation
 
 <p align="center">
-<a href="https://zino.saleemhadad.me/docs/1.0/En"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png" alt="English Docs"></a>
+<a href="https://zino.saleemhadad.me/docs/"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png" alt="English Docs"></a>
 </p>
 
 ## ToDo
