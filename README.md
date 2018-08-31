@@ -17,11 +17,10 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library documentations.
 
->   Avaliable Docs
+> Documentation
 
 <p align="center">
 <a href="https://zino.saleemhadad.me/docs/1.0/En"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png" alt="English Docs"></a>
-<a href="https://zino.saleemhadad.me/docs/1.0/Ar"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/arabic-docs.png" alt="Arabic Docs"></a>
 </p>
 
 ## ToDo
