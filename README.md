@@ -15,8 +15,6 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 
 ## Getting Started
 
-Please refer to [Zino Website](https://zino.saleemhadad.me/) to read the library documentations.
-
 > Documentation
 
 <p align="center">
