@@ -13,6 +13,8 @@
 
 Custom C++ based Arduino library provides a convenient and fast way for developing embedded systems projects.
 
+![zino](https://pbs.twimg.com/media/DmcXBgMU4AEV-dU.png:medium)
+
 ## Documentation
 
 
