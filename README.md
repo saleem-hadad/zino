@@ -13,21 +13,11 @@
 
 Custom C++ based Arduino library provides a convenient and fast way for developing embedded systems projects.
 
-## Getting Started
+## Documentation
 
-> Documentation
 
-<p align="center">
-<a href="https://zino.saleemhadad.me/docs/"><img src="https://raw.githubusercontent.com/saleem-hadad/zino/master/assets/english-docs.png" alt="English Docs"></a>
-</p>
+See [full documentation](https://zino.saleemhadad.me/docs/)
 
-## ToDo
-
-- [ ] Add external EEPROM class
-- [ ] Add support for other boards
-- [ ] Improve library's structure
-- [ ] Add extra functionalities to GPIO class
-- [ ] Improve DC Motor calss
 
 ## License
 
