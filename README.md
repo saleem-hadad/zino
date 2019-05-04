@@ -18,7 +18,7 @@ Custom C++ based Arduino library provides a convenient and fast way for developi
 ## Documentation
 
 
-See [full documentation](https://zino.saleemhadad.me/docs/)
+See [full documentation](https://zino.binarytorch.com.my)
 
 
 ## License
